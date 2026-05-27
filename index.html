@@ -38,11 +38,20 @@
                     
                     <p class="hero-lead">Nếu bạn là <strong>manager hoặc team lead</strong> đang phải xử lý quá nhiều việc lặp lại, buổi học này dành cho bạn. Bạn sẽ học cách dùng Claude để biến những phần việc đang làm bạn tốn thời gian nhất thành một workflow rõ ràng hơn, nhanh hơn, và ít ma sát hơn.</p>
                     
-                    <p class="hero-description">Bạn mở ngày mới với danh sách việc quan trọng. Nhưng đến cuối ngày, phần lớn năng lượng lại đi vào những việc lặp lại, những lần tổng hợp thông tin, những vòng follow-up, và những báo cáo mất thời gian hơn mức đáng có.</p>
-                    
-                    <div class="reframing-card">
-                        <p>Đây không phải buổi học để biết thêm về AI. Đây là buổi học để <strong>xây lại cách bạn làm việc</strong>: giảm phân mảnh, giảm thao tác tay, tăng tốc đầu ra, và lấy lại cảm giác chủ động trong vai trò quản lý.</p>
-                    </div>
+                    <ul class="hero-benefits-list">
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Giảm tải thời gian họp hành và ghi chép thủ công.</span>
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Chuẩn hóa quy trình báo cáo tuần tự động bằng Claude.</span>
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Thiết lập workflow follow-up tiến độ tự chạy không tốn sức.</span>
+                        </li>
+                    </ul>
 
                     <div class="hero-meta">
                         <div class="meta-item">
@@ -206,12 +215,101 @@
             </div>
         </section>
 
+        <!-- Interactive Before/After Sandbox Section -->
+        <section class="sandbox-section reveal-on-scroll">
+            <div class="container">
+                <h2 class="section-title text-center">Show, don't tell: Quy trình Trước & Sau qua Claude</h2>
+                <p class="section-subtitle text-center">Nhấp chọn tab bên dưới để so sánh hiệu quả chuyển đổi từ cách làm cũ sang cách làm mới với Claude.</p>
+                
+                <div class="sandbox-widget">
+                    <div class="sandbox-tabs">
+                        <button class="sandbox-tab active" data-tab="before">Trước: Biên bản họp thô, lộn xộn</button>
+                        <button class="sandbox-tab" data-tab="after">Sau: Action Items sạch qua Claude</button>
+                    </div>
+                    
+                    <div class="sandbox-panels">
+                        <!-- Before Panel -->
+                        <div class="sandbox-panel active" id="panel-before">
+                            <div class="panel-header header-before">
+                                <span class="panel-status-tag">Cách làm cũ: Rối rắm & Quá tải</span>
+                            </div>
+                            <div class="panel-body">
+                                <div class="doc-title">MEMO CUỘC HỌP DỰ ÁN - 25/05</div>
+                                <div class="doc-text-messy">
+                                    <p>Họp lúc 9h sáng bàn về dự án marketing mới. Toàn bộ team tham gia. A nói là phần landing page chưa xong vì designer đang bận việc khác, chắc cuối tuần mới có layout thô. B bảo là quảng cáo Facebook đang chạy thử nhưng chi phí hơi cao, cần tối ưu lại tệp đối tượng. C nhắc là đối tác bên Tetra Pak đang đòi báo cáo tiến độ gấp, ai làm báo cáo này nhỉ? Hình như tuần trước Toàn bảo giao cho D làm mà chưa thấy cập nhật gì. D bảo là đang đợi số liệu từ kế toán. Ngoài ra cũng cần chuẩn bị slide thuyết trình cho buổi UEH Mentoring tuần sau. Mọi người tự nhớ phần việc của mình rồi làm nhé, có gì nhắn trên nhóm chat sau...</p>
+                                </div>
+                                <div class="panel-footer-alert">
+                                    <svg class="warning-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                    <span>Kết quả: Đầu việc bị trôi, họp xong không rõ ai làm gì, follow-up bằng trí nhớ mệt mỏi.</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- After Panel -->
+                        <div class="sandbox-panel" id="panel-after">
+                            <div class="panel-header header-after">
+                                <span class="panel-status-tag">Cách làm mới: Tự động & Rõ ràng</span>
+                            </div>
+                            <div class="panel-body">
+                                <div class="doc-title">ACTION ITEMS & QUYẾT ĐỊNH DỰ ÁN (Xử lý qua Claude)</div>
+                                <div class="doc-structured">
+                                    <div class="doc-section">
+                                        <h4>📌 Quyết định cốt lõi:</h4>
+                                        <p>Tập trung hoàn thành layout Landing Page thô trước thứ Sáu để kịp tiến độ marketing.</p>
+                                    </div>
+                                    <div class="doc-section">
+                                        <h4>📋 Danh sách Hành động (Action Items):</h4>
+                                        <table class="doc-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nhiệm vụ</th>
+                                                    <th>Người làm</th>
+                                                    <th>Hạn chót</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Hoàn thành layout Landing Page thô</strong></td>
+                                                    <td>Đức (Designer)</td>
+                                                    <td>Thứ Sáu, 29/05</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Tối ưu hóa tệp đối tượng Facebook Ads</strong></td>
+                                                    <td>Bình (Marketing)</td>
+                                                    <td>Thứ Năm, 28/05</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Tổng hợp số liệu doanh thu từ Kế toán</strong></td>
+                                                    <td>Duy (Operations)</td>
+                                                    <td>Thứ Tư, 27/05</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Lập báo cáo tiến độ gửi Tetra Pak</strong></td>
+                                                    <td>Duy (Operations)</td>
+                                                    <td>Thứ Năm, 28/05</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel-footer-success">
+                                    <svg class="check-circle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                    <span>Kết quả: 5 phút xử lý tự động, đầu ra sạch sẽ, giao việc rõ ràng, nhẹ đầu cho manager.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Vấn đề thật Section -->
-        <section class="pain-section">
+        <section class="pain-section reveal-on-scroll">
             <div class="container pain-container">
                 <div class="pain-content-left">
                     <h2 class="pain-title">Công việc quản lý không vỡ vì thiếu năng lực.<br>Nó vỡ vì bị <span>phân mảnh</span>.</h2>
-                    <p class="pain-lead">Bạn không thiếu việc quan trọng. Bạn đang thiếu một hệ thống đủ rõ để không bị lôi vào quá nhiều việc nhỏ nhặt hằng ngày.</p>
+                    <p class="pain-lead-story">Bạn mở ngày mới với danh sách việc quan trọng. Nhưng đến cuối ngày, phần lớn năng lượng lại đi vào những việc lặp lại, những lần tổng hợp thông tin, những vòng follow-up, và những báo cáo mất thời gian hơn mức đáng có.</p>
+                    <p class="pain-lead">Bạn không thiếu việc quan trọng. Bạn đang thiếu một hệ thống đủ rõ để không bị lôi vào quá nhiều việc nhỏ.</p>
                 </div>
                 <div class="pain-content-right">
                     <div class="pain-list-title">Mỗi ngày, bạn đang phải:</div>

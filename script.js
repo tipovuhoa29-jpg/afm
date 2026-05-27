@@ -233,4 +233,58 @@ document.addEventListener('DOMContentLoaded', () => {
         stepPayment.classList.remove('active');
         stepSuccess.classList.add('active');
     }
+
+    /* ==========================================================================
+       5. Interactive Sandbox Tab Switcher
+       ========================================================================== */
+    const sandboxTabs = document.querySelectorAll('.sandbox-tab');
+    const sandboxPanels = document.querySelectorAll('.sandbox-panel');
+
+    sandboxTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetTab = tab.getAttribute('data-tab');
+
+            // Toggle active tab class
+            sandboxTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Toggle active panel class
+            sandboxPanels.forEach(panel => {
+                const panelId = panel.getAttribute('id');
+                if (panelId === `panel-${targetTab}`) {
+                    panel.classList.add('active');
+                } else {
+                    panel.classList.remove('active');
+                }
+            });
+        });
+    });
+
+    /* ==========================================================================
+       6. Scroll Reveal using Intersection Observer
+       ========================================================================== */
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Reveal once
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+    } else {
+        // Fallback for browsers that don't support IntersectionObserver
+        revealElements.forEach(element => {
+            element.classList.add('active');
+        });
+    }
 });
