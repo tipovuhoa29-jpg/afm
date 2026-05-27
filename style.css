@@ -14,8 +14,8 @@
     --white: #FFFFFF;
     
     /* Typography */
-    --font-headings: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-headings: 'Be Vietnam Pro', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
 
     /* Shadows & Radii */
     --shadow-sm: 0 2px 8px rgba(31, 15, 67, 0.05);
@@ -49,7 +49,7 @@ body {
     font-family: var(--font-body);
     color: var(--text-dark);
     background-color: var(--white);
-    line-height: 1.6;
+    line-height: 1.65;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
@@ -251,16 +251,17 @@ strong {
 
 .hero-title {
     font-size: 2.75rem; /* 44px */
-    line-height: 1.2;
+    line-height: 1.15;
     margin-bottom: 1.5rem;
     color: var(--purple-deep);
 }
 
 .hero-lead {
     font-size: 1.125rem;
-    line-height: 1.6;
+    line-height: 1.65;
     margin-bottom: 1.5rem;
     color: var(--text-dark);
+    max-width: 680px;
 }
 
 .hero-benefits-list {
@@ -433,6 +434,49 @@ strong {
 }
 
 /* ==========================================================================
+   Hero Proof Strip Section (CRO high impact banner below Hero)
+   ========================================================================== */
+.hero-proof-strip {
+    background-color: var(--white);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 0;
+    text-align: center;
+}
+
+.hero-proof-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 0.9375rem;
+}
+
+.proof-strip-label {
+    background-color: rgba(255, 107, 0, 0.1);
+    color: var(--orange-action);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.proof-strip-quote {
+    font-style: italic;
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.proof-strip-author {
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* ==========================================================================
    Trust Strip Section
    ========================================================================== */
 .trust-strip-section {
@@ -540,8 +584,8 @@ strong {
 .testimonial-user-icon {
     width: 44px;
     height: 44px;
-    background-color: var(--purple-light);
-    color: var(--purple-brand);
+    background-color: var(--purple-brand);
+    color: var(--white);
     font-weight: 700;
     font-size: 0.875rem;
     border-radius: 50%;
@@ -936,18 +980,17 @@ strong {
 .countdown-wrapper {
     background-color: var(--purple-light);
     border-radius: var(--radius-md);
-    padding: 20px;
-    margin-bottom: 2rem;
+    padding: 14px 18px;
+    margin-bottom: 1.5rem;
     border: 1px solid var(--border-color);
 }
 
 .countdown-label {
     display: block;
-    font-size: 0.8125rem;
+    font-size: 0.78rem;
     font-weight: 600;
     color: var(--text-muted);
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
 
@@ -956,42 +999,54 @@ strong {
     justify-content: center;
     align-items: center;
     gap: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .timer-unit {
     display: flex;
     flex-direction: column;
-    width: 60px;
+    width: 48px;
 }
 
 .timer-unit span:first-child {
     font-family: var(--font-headings);
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--orange-action);
     line-height: 1.1;
 }
 
 .unit-label {
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
     color: var(--text-muted);
     text-transform: uppercase;
 }
 
 .timer-colon {
     font-family: var(--font-headings);
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--orange-action);
     line-height: 1.1;
-    padding-bottom: 14px;
+    padding-bottom: 10px;
 }
 
 .countdown-deadline {
-    font-size: 0.8125rem;
+    font-size: 0.78rem;
     font-weight: 600;
     color: var(--purple-brand);
+}
+
+.pricing-risk-reduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-muted);
 }
 
 .pricing-footer-copy {
@@ -1982,6 +2037,14 @@ strong {
     margin-top: 2px;
 }
 
+.sandbox-conclusion {
+    margin-top: 24px;
+    font-family: var(--font-headings);
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--purple-brand);
+}
+
 /* ==========================================================================
    Scroll Reveal Animation
    ========================================================================== */
@@ -2130,5 +2193,12 @@ strong {
     .doc-table td {
         padding: 8px 10px;
         font-size: 0.8125rem;
+    }
+
+    /* Mobile Hero Proof Strip optimization */
+    .hero-proof-container {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
     }
 }
