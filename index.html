@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI FOR MANAGER - 1 ngày để tối ưu hóa công việc quản lý</title>
+    <meta name="description" content="Khóa học thực chiến giúp Manager, Team Lead giảm phân mảnh, giảm họp hành, báo cáo và follow-up thủ công bằng Claude.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                SUNEXT <span>AI</span>
+            </div>
+            <div class="header-info">
+                <span class="header-date">Thứ 7, 13/06 | 8:30 - 17:00</span>
+                <a href="#offer-section" class="btn btn-outline btn-sm">Giữ chỗ ngay</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">AI FOR MANAGER</span>
+                    <h1 class="hero-title">1 ngày để giảm tải họp, báo cáo và follow-up — để đầu óc nhẹ hơn, quyết nhanh hơn, và lấy lại quyền kiểm soát công việc</h1>
+                    
+                    <p class="hero-lead">Nếu bạn là <strong>manager hoặc team lead</strong> đang phải xử lý quá nhiều việc lặp lại, buổi học này dành cho bạn. Bạn sẽ học cách dùng Claude để biến những phần việc đang làm bạn tốn thời gian nhất thành một workflow rõ ràng hơn, nhanh hơn, và ít ma sát hơn.</p>
+                    
+                    <p class="hero-description">Bạn mở ngày mới với danh sách việc quan trọng. Nhưng đến cuối ngày, phần lớn năng lượng lại đi vào những việc lặp lại, những lần tổng hợp thông tin, những vòng follow-up, và những báo cáo mất thời gian hơn mức đáng có.</p>
+                    
+                    <div class="reframing-card">
+                        <p>Đây không phải buổi học để biết thêm về AI. Đây là buổi học để <strong>xây lại cách bạn làm việc</strong>: giảm phân mảnh, giảm thao tác tay, tăng tốc đầu ra, và lấy lại cảm giác chủ động trong vai trò quản lý.</p>
+                    </div>
+
+                    <div class="hero-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            <span>Thứ 7, 13/06 | 8:30 - 17:00</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Sand Space School, 93/16 Xô Viết Nghệ Tĩnh, Gia Định, Hồ Chí Minh</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#offer-section" class="btn btn-primary">Giữ chỗ ngay</a>
+                        <span class="cta-microcopy">Đăng ký xong sẽ nhận hướng dẫn chuẩn bị trước buổi học để vào lớp là làm được ngay.</span>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <!-- Workflow Schematic Illustration -->
+                    <div class="schematic-container">
+                        <div class="node node-input">
+                            <div class="node-title">Inputs Phân Mảnh</div>
+                            <div class="node-item">Báo cáo thô</div>
+                            <div class="node-item">Note cuộc họp</div>
+                            <div class="node-item">Tiến độ tin nhắn</div>
+                        </div>
+                        <div class="connector-line line-1">
+                            <svg class="arrow-path" width="80" height="40" viewBox="0 0 80 40">
+                                <path d="M0,20 Q40,40 80,20" fill="none" stroke="#2D126B" stroke-width="2" stroke-dasharray="4"/>
+                                <polygon points="80,20 72,15 75,20 72,25" fill="#2D126B"/>
+                            </svg>
+                        </div>
+                        <div class="node node-core active">
+                            <div class="node-title">Claude Cowork / Code</div>
+                            <div class="node-status">Hệ thống Workflow AI</div>
+                            <div class="pulse-ring"></div>
+                        </div>
+                        <div class="connector-line line-2">
+                            <svg class="arrow-path" width="80" height="40" viewBox="0 0 80 40">
+                                <path d="M0,20 Q40,0 80,20" fill="none" stroke="#FF6B00" stroke-width="2"/>
+                                <polygon points="80,20 72,15 75,20 72,25" fill="#FF6B00"/>
+                            </svg>
+                        </div>
+                        <div class="node node-output">
+                            <div class="node-title">Đầu Ra Chuẩn Hóa</div>
+                            <div class="node-item">Báo cáo tự động</div>
+                            <div class="node-item">Action Item sạch</div>
+                            <div class="node-item">Quyết định nhanh</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Strip Section -->
+        <section class="trust-strip-section">
+            <div class="container trust-container">
+                <div class="instructor-card">
+                    <div class="instructor-avatar">
+                        <!-- Placeholder using inline SVG for high quality styling -->
+                        <svg class="avatar-svg" viewBox="0 0 100 100" fill="none">
+                            <circle cx="50" cy="50" r="48" fill="#2D126B" stroke="#FF6B00" stroke-width="2"/>
+                            <path d="M50 30 A15 15 0 1 0 50 60 A15 15 0 1 0 50 30 Z M20 85 Q50 60 80 85 Z" fill="#F6F3FC"/>
+                        </svg>
+                    </div>
+                    <div class="instructor-info">
+                        <p class="instructor-bio">Đào tạo trực tiếp bởi <strong>Lý Đức Toàn</strong>, CEO Sunext AI, với gần 20 năm kinh nghiệm lãnh đạo B2B tại Tetra Pak và Multi-Color Corporation, đồng thời là Co-Chairman UEH Mentoring, cộng đồng hơn 300 executives.</p>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <svg class="chevron-down-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proof Thật - Testimonials Section -->
+        <section class="proof-section">
+            <div class="container">
+                <h2 class="section-title text-center">Bằng chứng thực tế từ người học thật</h2>
+                
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="card-accent"></div>
+                        <div class="testimonial-header">
+                            <div class="testimonial-user-icon">MA</div>
+                            <div>
+                                <h3 class="testimonial-name">Nguyễn Minh Anh</h3>
+                                <span class="testimonial-role">Sales Manager</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>“Trước đây tôi mất rất nhiều thời gian để gom thông tin cho báo cáo tuần. Sau buổi này, tôi có cách chuẩn hóa input ngay từ đầu và dùng Claude để hỗ trợ phần tổng hợp. Tôi <strong>tiết kiệm được vài giờ mỗi tuần, và báo cáo cũng rõ hơn hẳn</strong>.”</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="card-accent"></div>
+                        <div class="testimonial-header">
+                            <div class="testimonial-user-icon">QH</div>
+                            <div>
+                                <h3 class="testimonial-name">Trần Quốc Huy</h3>
+                                <span class="testimonial-role">Team Lead Operations</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>“Điểm thay đổi lớn nhất với tôi là follow-up. Trước kia tôi nhắn tay từng người rồi tự ghép lại tình trạng việc. Bây giờ tôi có <strong>workflow để gom action item và nhắc việc theo cấu trúc, nên đỡ lệ thuộc vào trí nhớ hơn rất nhiều</strong>.”</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="card-accent"></div>
+                        <div class="testimonial-header">
+                            <div class="testimonial-user-icon">PL</div>
+                            <div>
+                                <h3 class="testimonial-name">Lê Phương Linh</h3>
+                                <span class="testimonial-role">Head of Department</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>“Tôi từng thử AI khá nhiều nhưng chỉ ở mức hỏi nhanh. Sau buổi học, tôi hiểu lúc nào nên dùng Claude Cowork để xử lý công việc tri thức, và lúc nào có thể mở rộng sang Claude Code cho phần logic hơn. <strong>Cảm giác là mình đang có một hệ thống, không chỉ một công cụ</strong>.”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 Kết quả Section -->
+        <section class="results-section">
+            <div class="container">
+                <h2 class="section-title text-center">Sau buổi học, bạn sẽ rời lớp với 3 thứ rất rõ:</h2>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon-container">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <h3>Workflow AI cá nhân hóa</h3>
+                        <p>Một workflow AI cá nhân hóa hoàn toàn thiết lập dựa trên chính công việc quản lý thực tế của riêng bạn.</p>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-icon-container">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="9"></line><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="15" y2="17"></line></svg>
+                        </div>
+                        <h3>Bộ khung giảm tải việc ngốn sức</h3>
+                        <p>Một bộ khung chuẩn hóa để lập tức giảm thời gian cho 3 đầu việc tiêu tốn năng lượng nhất: họp, báo cáo và follow-up.</p>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-icon-container">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        </div>
+                        <h3>Khả năng làm chủ Claude</h3>
+                        <p>Một sự phân định rõ ràng để biết chính xác lúc nào nên dùng Claude Cowork, lúc nào nên mở rộng sang Claude Code.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vấn đề thật Section -->
+        <section class="pain-section">
+            <div class="container pain-container">
+                <div class="pain-content-left">
+                    <h2 class="pain-title">Công việc quản lý không vỡ vì thiếu năng lực.<br>Nó vỡ vì bị <span>phân mảnh</span>.</h2>
+                    <p class="pain-lead">Bạn không thiếu việc quan trọng. Bạn đang thiếu một hệ thống đủ rõ để không bị lôi vào quá nhiều việc nhỏ nhặt hằng ngày.</p>
+                </div>
+                <div class="pain-content-right">
+                    <div class="pain-list-title">Mỗi ngày, bạn đang phải:</div>
+                    <ul class="pain-list">
+                        <li>
+                            <svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            <span>Họp nhiều nhưng đầu ra không đủ rõ.</span>
+                        </li>
+                        <li>
+                            <svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            <span>Làm lại báo cáo và tài liệu nhiều lần.</span>
+                        </li>
+                        <li>
+                            <svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            <span>Nhắc việc, tổng hợp, follow-up thủ công.</span>
+                        </li>
+                        <li>
+                            <svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            <span>Chuyển ngữ giữa thông tin rời rạc và quyết định thật.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vì sao chương trình khác biệt Section -->
+        <section class="diff-section">
+            <div class="container">
+                <h2 class="section-title text-center">Vì sao chương trình này khác</h2>
+                <p class="section-subtitle text-center">Đây không phải buổi học để xem demo rồi về. Bạn sẽ học theo logic thực chiến:</p>
+                
+                <div class="diff-logic-grid">
+                    <div class="logic-card">
+                        <div class="logic-num">01</div>
+                        <p>Lấy chính những loại việc đang ngốn thời gian thực tế của bạn mang đến lớp học.</p>
+                    </div>
+                    <div class="logic-card">
+                        <div class="logic-num">02</div>
+                        <p>Bắt tay trực tiếp chuyển hóa chúng thành một quy trình workflow AI tự động hóa.</p>
+                    </div>
+                    <div class="logic-card">
+                        <div class="logic-num">03</div>
+                        <p>Xác định rõ phần nào AI làm được, phần nào AI chỉ hỗ trợ, và phần nào bạn giữ quyền quyết định.</p>
+                    </div>
+                </div>
+
+                <div class="tools-comparison">
+                    <div class="tool-box">
+                        <div class="tool-badge">Dành cho công việc tri thức</div>
+                        <h3>Claude Cowork</h3>
+                        <p>Công cụ mang tính agentic để làm việc trực tiếp với file, ứng dụng và các tác vụ thực tế mỗi ngày.</p>
+                    </div>
+                    <div class="tool-divider">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </div>
+                    <div class="tool-box highlight">
+                        <div class="tool-badge">Dành cho automation chuyên sâu</div>
+                        <h3>Claude Code</h3>
+                        <p>Mở rộng sang các luồng logic lập trình và tự động hóa sâu hơn khi bạn cần chuẩn hóa toàn bộ quy trình.</p>
+                    </div>
+                </div>
+
+                <div class="callout-banner text-center">
+                    <p>Nói đơn giản hơn: <strong>Bạn không học thêm một công cụ. Bạn xây lại toàn bộ cách làm việc của mình.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bạn sẽ mang về gì Section -->
+        <section class="deliverables-section">
+            <div class="container">
+                <h2 class="section-title text-center">Bạn sẽ mang về những gì?</h2>
+                <p class="section-subtitle text-center">Khi kết thúc ngày học, bạn sẽ mang về:</p>
+
+                <div class="deliverables-grid">
+                    <div class="deliverable-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>1 workflow AI dành riêng cho vai trò manager của bạn.</span>
+                    </div>
+                    <div class="deliverable-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>1 bộ prompt dùng ngay cho họp, báo cáo, follow-up, brainstorming.</span>
+                    </div>
+                    <div class="deliverable-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>1 quy trình dùng Claude Cowork cho tài liệu và tổng hợp thông tin thật.</span>
+                    </div>
+                    <div class="deliverable-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>1 khung tư duy để biết khi nào cần Claude Code cho automation.</span>
+                    </div>
+                    <div class="deliverable-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>1 kế hoạch 7 ngày để đưa vào công việc ngay sau lớp.</span>
+                    </div>
+                    <div class="deliverable-item">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>1 checklist để không bị “học xong rồi để đó”.</span>
+                    </div>
+                </div>
+
+                <div class="deliverables-footer text-center">
+                    <p>Điều bạn nhận được không phải là cảm hứng. <strong>Điều bạn nhận được là một cách làm việc mới.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offer Stack & Pricing Section -->
+        <section id="offer-section" class="offer-section">
+            <div class="container">
+                <div class="offer-container">
+                    <h2 class="offer-title text-center">Với 997.000đ, bạn không chỉ mua một chỗ ngồi.</h2>
+                    <p class="offer-subtitle text-center">Bạn nhận được trọn gói giá trị thực chiến:</p>
+
+                    <div class="offer-grid">
+                        <div class="offer-item">
+                            <div class="offer-item-num">✓</div>
+                            <span>1 ngày đào tạo trực tiếp.</span>
+                        </div>
+                        <div class="offer-item">
+                            <div class="offer-item-num">✓</div>
+                            <span>1 framework giảm tải các việc bị lặp và phân mảnh.</span>
+                        </div>
+                        <div class="offer-item">
+                            <div class="offer-item-num">✓</div>
+                            <span>1 bộ prompt và pattern áp dụng ngay sau lớp.</span>
+                        </div>
+                        <div class="offer-item">
+                            <div class="offer-item-num">✓</div>
+                            <span>1 workflow mẫu để nhìn ra cách triển khai vào công việc thực tế.</span>
+                        </div>
+                        <div class="offer-item">
+                            <div class="offer-item-num">✓</div>
+                            <span>1 kế hoạch 7 ngày để không học xong rồi bỏ.</span>
+                        </div>
+                        <div class="offer-item">
+                            <div class="offer-item-num">✓</div>
+                            <span>1 phiên tư duy lại cách dùng AI: không hỏi vặt, mà giao việc đúng cách.</span>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Box -->
+                    <div class="pricing-card">
+                        <div class="pricing-scarcity-pill">Hạn chế: Chỉ mở 25 chỗ ngồi</div>
+                        <div class="pricing-amount">997.000đ</div>
+                        
+                        <!-- Real-time dynamic Countdown -->
+                        <div class="countdown-wrapper">
+                            <span class="countdown-label">Thời gian giữ giá ưu đãi còn:</span>
+                            <div class="countdown-timer">
+                                <div class="timer-unit"><span id="days">00</span><span class="unit-label">Ngày</span></div>
+                                <div class="timer-colon">:</div>
+                                <div class="timer-unit"><span id="hours">00</span><span class="unit-label">Giờ</span></div>
+                                <div class="timer-colon">:</div>
+                                <div class="timer-unit"><span id="minutes">00</span><span class="unit-label">Phút</span></div>
+                                <div class="timer-colon">:</div>
+                                <div class="timer-unit"><span id="seconds">00</span><span class="unit-label">Giây</span></div>
+                            </div>
+                            <span class="countdown-deadline">Đóng đăng ký: hết thứ 4, 10/06, hoặc khi đủ chỗ</span>
+                        </div>
+
+                        <!-- Registration Trigger CTA -->
+                        <button id="register-trigger-btn" class="btn btn-primary btn-block btn-lg">Giữ chỗ ngay</button>
+                        <p class="pricing-footer-copy">Bạn không trả tiền để nghe. <strong>Bạn trả tiền để đổi cách làm việc.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ai nên học Section -->
+        <section class="persona-fit-section">
+            <div class="container fits-container">
+                <div class="fit-box suitable">
+                    <h3>Chương trình này phù hợp nếu bạn là:</h3>
+                    <ul>
+                        <li>Manager đang quá tải vì công việc vận hành và điều phối.</li>
+                        <li>Team lead cần team chạy gọn hơn, ít chờ nhau hơn.</li>
+                        <li>Head of department muốn xử lý thông tin nhanh hơn để ra quyết định tốt hơn.</li>
+                        <li>Founder đang phải đội quá nhiều việc điều hành mỗi ngày.</li>
+                        <li>Người đã thử AI nhưng vẫn chưa biến nó thành một phần của quy trình thật.</li>
+                    </ul>
+                </div>
+                <div class="fit-box unsuitable">
+                    <h3>Chương trình này KHÔNG dành cho bạn nếu:</h3>
+                    <p>Bạn chỉ muốn đi nghe một buổi giới thiệu tổng quan về công nghệ AI chung chung.</p>
+                    <div class="unsuitable-highlight">Buổi học này dành riêng cho người muốn thực sự mang về một cách làm mới.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vì sao nên tin Section -->
+        <section class="instructor-section">
+            <div class="container instructor-layout">
+                <div class="instructor-media">
+                    <div class="avatar-placeholder">
+                        <svg viewBox="0 0 100 100" fill="none">
+                            <rect width="100" height="100" rx="16" fill="#F6F3FC"/>
+                            <path d="M50 25 A15 15 0 1 0 50 55 A15 15 0 1 0 50 25 Z" fill="#2D126B"/>
+                            <path d="M15 90 Q50 60 85 90 Z" fill="#2D126B"/>
+                        </svg>
+                        <span class="avatar-label">Lý Đức Toàn</span>
+                    </div>
+                </div>
+                <div class="instructor-details">
+                    <h2 class="section-title">Vì sao nên tin?</h2>
+                    <p>Chương trình do trực tiếp anh <strong>Lý Đức Toàn</strong> chịu trách nhiệm đào tạo.</p>
+                    <p>Anh mang tới góc nhìn thực tế của một người đã làm việc chuyên nghiệp nhiều năm trong môi trường B2B, quản trị thương mại, mở rộng thị trường và xây dựng hệ thống vận hành doanh nghiệp thật sự.</p>
+                    <p>Điều đó quan trọng vì các manager không cần thêm một người nói lý thuyết công nghệ hay. Manager cần một người thấu hiểu sâu sắc áp lực điều hành thực tế và biết cách chuyển đổi AI thành các hệ thống vận hành có thể chạy được.</p>
+                    <div class="company-card">
+                        <p><strong>Đơn vị tổ chức:</strong> Công ty Cổ phần Sunext AI</p>
+                        <p><strong>Mã số thuế:</strong> 0319500991</p>
+                        <p class="company-footer">Thông tin liên hệ và hiện diện doanh nghiệp minh bạch pháp lý rõ ràng.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vì sao nên quyết định ngay Section -->
+        <section class="decision-section">
+            <div class="container text-center">
+                <h2 class="section-title">Vì sao nên quyết định ngay?</h2>
+                <div class="decision-content">
+                    <p>Bạn có thể tiếp tục làm theo cách cũ thêm vài tháng nữa. Nhưng phần lớn khả năng là ngày làm việc của bạn vẫn sẽ bị cắt vụn như cũ.</p>
+                    <p>Bạn vẫn sẽ họp hành nhiều. Vẫn sẽ làm báo cáo nhiều. Vẫn sẽ tự tay follow-up bằng trí nhớ và tin nhắn thủ công nhiều hơn mức cần thiết.</p>
+                    <p>Mức giá <strong>997.000đ</strong> được thiết lập để việc ra quyết định của bạn đủ nhẹ nhàng.</p>
+                    <p>Nhưng giá trị của buổi học không nằm ở số giờ bạn ngồi trong lớp. Nó nằm ở số giờ bạn sẽ tiết kiệm được sau đó, mỗi tuần, từ chính những đầu việc lặt vặt đang bào mòn sự tập trung của bạn.</p>
+                </div>
+                <div class="decision-actions">
+                    <a href="#offer-section" class="btn btn-primary">Giữ chỗ ngay</a>
+                    <p class="cta-microcopy">Đăng ký sớm để có thời gian chuẩn bị laptop, tài khoản và tình huống công việc thật trước buổi học.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title text-center">Những câu hỏi thường gặp (FAQ)</h2>
+                
+                <div class="faq-accordion">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Tôi không rành kỹ thuật, có theo được không?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Có. Buổi học đi từ thực tế công việc quản lý trước, công cụ công nghệ sau. Bạn sẽ bắt đầu trực tiếp từ các tình huống công việc thật của mình, không phải học từ các thuật ngữ kỹ thuật phức tạp.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Tôi đã thử AI rồi mà không hiệu quả, buổi này khác gì?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Khác biệt ở chỗ đa số mọi người tự thử AI chỉ đang sử dụng nó ở mức hỏi đáp chat rời rạc. Buổi học này tập trung giải quyết theo dạng workflow. Bạn không học cách chat hay hơn. Bạn học cách tổ chức lại công việc để AI gánh đúng phần nên gánh.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>1 ngày có quá ngắn không?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Không, nếu mục tiêu của bạn rõ ràng. Bạn không cần đến 10 buổi học dài dòng để bắt đầu thiết lập workflow đầu tiên. Bạn chỉ cần 1 ngày tập trung tối đa để nhìn ra đúng điểm nghẽn, học cách giao việc cho AI, và chốt cách áp dụng ngay sau lớp học.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Team tôi chưa dùng Claude, tôi học có phí không?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Không. Buổi học này giúp bạn hiểu sâu sắc logic dùng AI cho công việc quản lý. Claude là môi trường tối ưu để bạn thực hành rõ ràng, nhưng thứ quý giá nhất bạn mang về là cách tư duy và cách triển khai quy trình.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Tôi sợ học xong lại để đó.</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Đó là nỗi lo rất thực tế của nhiều người. Và cũng chính là lý do chương trình này không dừng lại ở phần chia sẻ kiến thức suông. Bạn sẽ ra về với workflow đầu tiên tự xây và một bản kế hoạch hành động 7 ngày để bắt đầu sử dụng ngay.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section id="final-cta" class="final-cta-section">
+            <div class="container text-center">
+                <div class="final-cta-container">
+                    <p class="final-cta-lead">Bạn không cần thêm một ngày bận rộn nữa để nhận ra công việc của mình đang quá phân mảnh. Bạn cũng không cần thêm một workshop nói chung chung về AI.</p>
+                    <p class="final-cta-punch">Bạn cần một ngày đủ đúng để: giảm tải họp, giảm tải báo cáo, giảm tải follow-up, và lấy lại quyền kiểm soát công việc.</p>
+                    
+                    <div class="final-cta-box">
+                        <h2 class="final-cta-title">AI FOR MANAGER</h2>
+                        <p class="final-cta-desc">1 ngày để giảm tải họp, báo cáo và follow-up — để đầu óc nhẹ hơn, quyết nhanh hơn, và làm việc trong trạng thái chủ động hơn.</p>
+                        
+                        <div class="final-cta-meta">
+                            <p><strong>Lịch học:</strong> Thứ 7, 13/06 | 8:30 - 17:00</p>
+                            <p><strong>Địa điểm:</strong> Sand Space School, 93/16 Xô Viết Nghệ Tĩnh, Gia Định, Hồ Chí Minh</p>
+                            <p class="final-price">Học phí: 997.000đ | Mở giới hạn 25 chỗ</p>
+                        </div>
+
+                        <a href="#offer-section" class="btn btn-primary btn-lg">Giữ chỗ ngay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>© 2026 Sunext AI. All rights reserved.</p>
+            <p class="footer-legal">Các thương hiệu Claude, Claude Cowork, Claude Code thuộc bản quyền của Anthropic PBC.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Registration / Payment Modal -->
+    <div id="registration-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close-btn">&times;</button>
+            
+            <!-- Step 1: Info Form -->
+            <div id="step-form-container" class="modal-step active">
+                <h3 class="modal-title">Đăng ký giữ chỗ AI FOR MANAGER</h3>
+                <p class="modal-subtitle">Vui lòng điền thông tin để tạo mã thanh toán khóa học.</p>
+                
+                <form id="reg-form">
+                    <div class="form-group">
+                        <label for="user-name">Họ và tên *</label>
+                        <input type="text" id="user-name" required placeholder="Ví dụ: Nguyễn Văn A">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-phone">Số điện thoại *</label>
+                        <input type="tel" id="user-phone" required placeholder="Ví dụ: 0901234567">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-email">Email liên hệ *</label>
+                        <input type="email" id="user-email" required placeholder="Ví dụ: name@company.com">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">Tạo mã QR & giữ chỗ</button>
+                </form>
+            </div>
+
+            <!-- Step 2: QR Payment -->
+            <div id="step-payment-container" class="modal-step">
+                <h3 class="modal-title">Quét mã QR để thanh toán giữ chỗ</h3>
+                <p class="modal-subtitle">Đơn đăng ký của bạn đã được ghi nhận tạm thời. Vui lòng quét mã VietQR bên dưới để hoàn tất.</p>
+                
+                <div class="payment-layout">
+                    <div class="qr-code-section">
+                        <!-- Dynamic QR generation wrapper -->
+                        <div class="qr-container">
+                            <img id="payment-qr-img" src="" alt="Mã QR thanh toán VietQR">
+                            <div class="qr-overlay-text">VietQR Động</div>
+                        </div>
+                        <div id="payment-timer-countdown" class="payment-timer">09:59</div>
+                    </div>
+                    <div class="payment-instructions">
+                        <div class="bank-details">
+                            <p><strong>Ngân hàng:</strong> MB Bank (Ngân hàng Quân Đội)</p>
+                            <p><strong>Số tài khoản:</strong> 0319500991 (Sunext AI)</p>
+                            <p><strong>Tên chủ tài khoản:</strong> CONG TY CO PHAN SUNEXT AI</p>
+                            <p><strong>Số tiền:</strong> <span class="highlight-price">997.000đ</span></p>
+                            <p><strong>Nội dung:</strong> <span id="payment-code" class="highlight-code">AFM12345</span></p>
+                        </div>
+                        <div class="payment-alert">
+                            ⚠️ Vui lòng chuyển khoản chính xác số tiền và nội dung chuyển khoản để hệ thống tự động xác nhận sau 1-2 phút.
+                        </div>
+                        
+                        <!-- Demo trigger button to simulate banking webhook success -->
+                        <button id="simulate-success-btn" class="btn btn-outline btn-block">Demo: Giả lập đã chuyển khoản thành công</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Success Redirection -->
+            <div id="step-success-container" class="modal-step">
+                <div class="success-icon-wrapper">
+                    <svg class="success-checkmark" viewBox="0 0 52 52">
+                        <circle class="success-checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                        <path class="success-checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    </svg>
+                </div>
+                <h3 class="modal-title">Đăng ký thành công!</h3>
+                <p class="modal-subtitle">Hệ thống đã xác nhận khoản thanh toán của bạn.</p>
+                
+                <div class="success-message">
+                    <p>Chào mừng bạn đã gia nhập hàng ngũ các Manager làm chủ quy trình vận hành bằng AI.</p>
+                    <p>Vui lòng click vào nút bên dưới để tham gia nhóm Zalo lớp học nhằm nhận tài liệu hướng dẫn chuẩn bị trước lớp học.</p>
+                    
+                    <a href="https://zalo.me/g/afm-class-demo" target="_blank" class="btn btn-primary btn-block btn-lg success-zalo-btn">Tham gia nhóm Zalo Lớp học</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Bottom CTA Bar -->
+    <div id="sticky-bar" class="sticky-bar">
+        <div class="container sticky-container">
+            <div class="sticky-info">
+                <span class="sticky-badge">Chỉ mở 25 chỗ</span>
+                <span class="sticky-price">997.000đ</span>
+                <span class="sticky-divider">|</span>
+                <span class="sticky-text">Lấy lại quyền kiểm soát công việc</span>
+            </div>
+            <a href="#offer-section" class="btn btn-primary btn-sm sticky-cta-btn">Giữ chỗ ngay</a>
+        </div>
+    </div>
+
+    <!-- Javascript File -->
+    <script src="script.js"></script>
+</body>
+</html>
