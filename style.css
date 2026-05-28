@@ -13,6 +13,12 @@
     --border-color: #E8E3F2;
     --white: #FFFFFF;
     
+    /* Accessibility Text Tokens on Dark Backgrounds */
+    --text-white-main: #FFFFFF;
+    --text-white-muted: rgba(255, 255, 255, 0.82);
+    --text-lavender: #D7C7FF;
+    --text-muted-dark: #C3BBD4;
+    
     /* Typography */
     --font-headings: 'Be Vietnam Pro', sans-serif;
     --font-body: 'Be Vietnam Pro', sans-serif;
@@ -219,8 +225,9 @@ strong {
    ========================================================================== */
 .hero-section {
     padding: 80px 0 100px 0;
-    background: radial-gradient(circle at 80% 20%, #FDFBFF 0%, #FFFFFF 100%);
+    background: radial-gradient(circle at 80% 20%, var(--purple-brand) 0%, var(--purple-deep) 100%);
     position: relative;
+    color: var(--text-white-muted);
 }
 
 .hero-container {
@@ -237,8 +244,8 @@ strong {
 }
 
 .badge {
-    background-color: var(--purple-light);
-    color: var(--purple-brand);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-lavender);
     font-size: 0.8125rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -246,21 +253,21 @@ strong {
     border-radius: 50px;
     margin-bottom: 1.5rem;
     display: inline-block;
-    border: 1px solid rgba(45, 18, 107, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .hero-title {
     font-size: 2.75rem; /* 44px */
     line-height: 1.15;
     margin-bottom: 1.5rem;
-    color: var(--purple-deep);
+    color: var(--text-white-main);
 }
 
 .hero-lead {
     font-size: 1.125rem;
     line-height: 1.65;
     margin-bottom: 1.5rem;
-    color: var(--text-dark);
+    color: var(--text-lavender);
     max-width: 680px;
 }
 
@@ -277,7 +284,7 @@ strong {
     align-items: flex-start;
     gap: 10px;
     font-size: 1rem;
-    color: var(--text-dark);
+    color: var(--text-white-muted);
 }
 
 .hero-benefits-list li .check-icon {
@@ -289,8 +296,8 @@ strong {
 }
 
 .reframing-card {
-    background-color: var(--purple-light);
-    border-left: 4px solid var(--purple-brand);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--orange-action);
     border-radius: var(--radius-sm);
     padding: 20px;
     margin-bottom: 2rem;
@@ -300,13 +307,13 @@ strong {
 .reframing-card p {
     margin-bottom: 0;
     font-size: 1rem;
-    color: var(--text-dark);
+    color: var(--text-white-muted);
 }
 
 .hero-meta {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     margin-bottom: 2rem;
 }
 
@@ -314,8 +321,14 @@ strong {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 0.9375rem;
-    color: var(--text-dark);
+    font-size: 1rem;
+    color: var(--text-white-muted);
+    font-weight: 500;
+}
+
+.meta-item strong {
+    color: var(--text-white-main);
+    font-weight: 600;
 }
 
 .meta-icon {
@@ -335,7 +348,7 @@ strong {
 
 .cta-microcopy {
     font-size: 0.8125rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.60);
 }
 
 /* Schematic Illustration style */
@@ -1383,12 +1396,17 @@ strong {
 }
 
 .final-cta-meta {
-    font-size: 0.9375rem;
-    color: #E8E3F2;
+    font-size: 1rem;
+    color: var(--text-white-muted);
     margin-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+}
+
+.final-cta-meta p strong {
+    color: var(--text-lavender);
+    font-weight: 600;
 }
 
 .final-price {
@@ -1445,6 +1463,7 @@ strong {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
 }
 
 .sticky-info {
@@ -1467,6 +1486,7 @@ strong {
 .sticky-price {
     font-weight: 700;
     font-size: 1.125rem;
+    color: var(--orange-action);
 }
 
 .sticky-divider {
@@ -1475,7 +1495,7 @@ strong {
 
 .sticky-text {
     font-size: 0.875rem;
-    color: #C3BBD4;
+    color: var(--text-white-muted);
 }
 
 /* ==========================================================================
@@ -1493,7 +1513,7 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 200;
+    z-index: 9999;
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-normal);
@@ -1556,7 +1576,35 @@ strong {
     font-size: 0.875rem;
     color: var(--text-muted);
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem; /* Giảm nhẹ margin để cân đối với thanh bar */
+}
+
+.modal-scarcity-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    padding: 10px;
+    background-color: var(--purple-light);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+}
+
+.scarcity-badge-orange,
+.scarcity-price-orange {
+    color: var(--orange-action);
+    font-weight: 700;
+}
+
+.scarcity-divider {
+    color: rgba(31, 15, 67, 0.15);
+}
+
+.scarcity-text-muted {
+    color: var(--text-muted);
 }
 
 /* Form Styles inside Modal */
@@ -2311,7 +2359,8 @@ strong {
         padding: 12px 0;
     }
     
-    .sticky-text {
+    .sticky-text,
+    .sticky-divider {
         display: none;
     }
     
