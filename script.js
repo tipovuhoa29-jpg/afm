@@ -287,4 +287,43 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.add('active');
         });
     }
+
+    /* ==========================================================================
+       7. Number Counter Animation for 500 Managers
+       ========================================================================== */
+    const counterElement = document.getElementById('manager-counter');
+    if (counterElement && 'IntersectionObserver' in window) {
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !counterElement.classList.contains('counted')) {
+                    counterElement.classList.add('counted'); // Prevent double-triggering
+                    
+                    const target = parseInt(counterElement.getAttribute('data-target') || '500', 10);
+                    const duration = 1800; // 1.8s
+                    const startTime = performance.now();
+                    
+                    function updateCounter(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        // Easing out quadratic: f(t) = t*(2-t)
+                        const easeProgress = progress * (2 - progress);
+                        const currentValue = Math.floor(easeProgress * target);
+                        
+                        counterElement.innerText = currentValue;
+                        
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counterElement.innerText = target;
+                        }
+                    }
+                    requestAnimationFrame(updateCounter);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        counterObserver.observe(counterElement);
+    }
 });
+
