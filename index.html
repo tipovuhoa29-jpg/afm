@@ -65,8 +65,11 @@
                     </div>
 
                     <div class="hero-actions">
-                        <a href="#offer-section" class="btn btn-primary">Giữ chỗ ngay</a>
-                        <span class="cta-microcopy">Đăng ký xong sẽ nhận hướng dẫn chuẩn bị trước buổi học để vào lớp là làm được ngay.</span>
+                        <div class="hero-cta-primary">
+                            <a href="#offer-section" class="btn btn-primary btn-lg btn-hero-cta">Tham gia ngay - Xây workflow AI của bạn</a>
+                            <p class="hero-cta-subtext">✓ Đăng ký 2 phút • Nhận checklist chuẩn bị ngay</p>
+                        </div>
+                        <span class="cta-microcopy">Đăng ký hoàn tất sẽ tự động gửi tài liệu chuẩn bị trước buổi học về email của bạn.</span>
                     </div>
                 </div>
                 
@@ -143,7 +146,7 @@
                     <div class="testimonial-card">
                         <div class="card-accent"></div>
                         <div class="testimonial-header">
-                            <div class="testimonial-user-icon">MA</div>
+                            <img src="assets/avatar-minh-anh.png" alt="Nguyễn Minh Anh" class="testimonial-avatar-img">
                             <div>
                                 <h3 class="testimonial-name">Nguyễn Minh Anh</h3>
                                 <span class="testimonial-role">Sales Manager</span>
@@ -158,7 +161,7 @@
                     <div class="testimonial-card">
                         <div class="card-accent"></div>
                         <div class="testimonial-header">
-                            <div class="testimonial-user-icon">QH</div>
+                            <img src="assets/avatar-quoc-huy.png" alt="Trần Quốc Huy" class="testimonial-avatar-img">
                             <div>
                                 <h3 class="testimonial-name">Trần Quốc Huy</h3>
                                 <span class="testimonial-role">Team Lead Operations</span>
@@ -173,7 +176,7 @@
                     <div class="testimonial-card">
                         <div class="card-accent"></div>
                         <div class="testimonial-header">
-                            <div class="testimonial-user-icon">PL</div>
+                            <img src="assets/avatar-phuong-linh.png" alt="Lê Phương Linh" class="testimonial-avatar-img">
                             <div>
                                 <h3 class="testimonial-name">Lê Phương Linh</h3>
                                 <span class="testimonial-role">Head of Department</span>
@@ -289,53 +292,64 @@
                         <!-- After Panel -->
                         <div class="sandbox-panel" id="panel-after">
                             <div class="panel-header header-after">
-                                <span class="panel-status-tag">Cách làm mới: Tự động & Rõ ràng</span>
+                                <span class="panel-status-tag">Cách làm mới: Tự động & Rõ việc</span>
                             </div>
                             <div class="panel-body">
-                                <div class="doc-title">DANH SÁCH VIỆC RÕ RÀNG & QUYẾT ĐỊNH DỰ ÁN (Xử lý qua Claude)</div>
-                                <div class="doc-structured">
-                                    <div class="doc-section">
-                                        <h4>📌 Quyết định cốt lõi:</h4>
-                                        <p>Tập trung hoàn thành layout Landing Page thô trước thứ Sáu để kịp tiến độ marketing.</p>
+                                <div class="doc-title">BẢNG ĐIỀU HÀNH DỰ ÁN TỰ ĐỘNG (Xử lý qua Claude)</div>
+                                
+                                <div class="dashboard-container">
+                                    <!-- Quyết định cốt lõi -->
+                                    <div class="dashboard-core-decision">
+                                        <span class="decision-badge">🎯 Quyết định cốt lõi</span>
+                                        <p>Ưu tiên hoàn thiện layout Landing Page thô trước thứ Sáu để marketing chạy đúng tiến độ.</p>
                                     </div>
-                                    <div class="doc-section">
-                                        <h4>📋 Danh sách Hành động (Action Items):</h4>
-                                        <table class="doc-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Nhiệm vụ</th>
-                                                    <th>Người làm</th>
-                                                    <th>Hạn chót</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><strong>Hoàn thành layout Landing Page thô</strong></td>
-                                                    <td>Đức (Designer)</td>
-                                                    <td>Thứ Sáu, 29/05</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Tối ưu hóa tệp đối tượng Facebook Ads</strong></td>
-                                                    <td>Bình (Marketing)</td>
-                                                    <td>Thứ Năm, 28/05</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Tổng hợp số liệu doanh thu từ Kế toán</strong></td>
-                                                    <td>Duy (Operations)</td>
-                                                    <td>Thứ Tư, 27/05</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Lập báo cáo tiến độ gửi Tetra Pak</strong></td>
-                                                    <td>Duy (Operations)</td>
-                                                    <td>Thứ Năm, 28/05</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    
+                                    <!-- Task List Cards (3 Tasks Sweet Spot) -->
+                                    <div class="dashboard-tasks-grid">
+                                        <!-- Task 1: Landing Page -->
+                                        <div class="task-card status-clear">
+                                            <div class="task-card-header">
+                                                <span class="task-cat">📋 LANDING PAGE</span>
+                                                <span class="status-badge clear">Rõ ràng</span>
+                                            </div>
+                                            <div class="task-title">Layout thô hoàn tất trước Thứ 6</div>
+                                            <div class="task-meta">
+                                                <span>👤 <strong>Đức (Designer)</strong></span>
+                                                <span>📅 Hạn: <strong>29/05</strong></span>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Task 2: Facebook Ads -->
+                                        <div class="task-card status-action">
+                                            <div class="task-card-header">
+                                                <span class="task-cat">💰 FACEBOOK ADS</span>
+                                                <span class="status-badge action">Hành động</span>
+                                            </div>
+                                            <div class="task-title">Test 3 audience mới giảm CPC</div>
+                                            <div class="task-meta">
+                                                <span>👤 <strong>Bình (Marketing)</strong></span>
+                                                <span>📅 Hạn: <strong>28/05</strong></span>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Task 3: Báo cáo -->
+                                        <div class="task-card status-waiting">
+                                            <div class="task-card-header">
+                                                <span class="task-cat">📊 BÁO CÁO TIẾN ĐỘ</span>
+                                                <span class="status-badge waiting">Chờ data</span>
+                                            </div>
+                                            <div class="task-title">Báo cáo Tetra Pak - đợi kế toán</div>
+                                            <div class="task-meta">
+                                                <span>👤 <strong>Duy (Ops)</strong></span>
+                                                <span>📅 Hạn: <strong>29/05</strong></span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                
                                 <div class="panel-footer-success">
                                     <svg class="check-circle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                                    <span>Kết quả: 5 phút tự động hóa, đầu ra rõ ràng, nhẹ đầu cho người quản lý.</span>
+                                    <span><strong>Kết quả:</strong> 5 phút xử lý qua Claude → Mọi người rõ việc, deadline chuẩn, không ai bị quên.</span>
                                 </div>
                             </div>
                         </div>
@@ -352,6 +366,10 @@
                     <h2 class="pain-title">Công việc quản lý không vỡ vì thiếu năng lực.<br>Nó vỡ vì bị <span>phân mảnh</span>.</h2>
                     <p class="pain-lead-story">Bạn mở ngày mới với danh sách việc quan trọng. Nhưng đến cuối ngày, phần lớn năng lượng lại đi vào những việc lặp lại, những lần tổng hợp thông tin, những vòng follow-up, và những báo cáo mất thời gian hơn mức đáng có.</p>
                     <p class="pain-lead">Bạn không thiếu việc quan trọng. Bạn đang thiếu một hệ thống đủ rõ để không bị lôi vào quá nhiều việc nhỏ.</p>
+                    <div class="pain-transition-bridge">
+                        <p>Vấn đề thực sự không nằm ở năng lực hay sự chăm chỉ của bạn.</p>
+                        <p>Nó nằm ở việc bạn đang phải tự tay gánh vác quá nhiều tác vụ lặp đi lặp lại <strong>hoàn toàn có thể tự động hóa được bằng AI</strong>.</p>
+                    </div>
                 </div>
                 <div class="pain-content-right">
                     <div class="pain-list-title">Mỗi ngày, bạn đang phải:</div>
@@ -383,34 +401,41 @@
                 <h2 class="section-title text-center">Vì sao chương trình này khác</h2>
                 <p class="section-subtitle text-center">Đây không phải buổi học để xem demo rồi về. Bạn sẽ học theo logic thực chiến:</p>
                 
-                <div class="diff-logic-grid">
-                    <div class="logic-card">
-                        <div class="logic-num">01</div>
-                        <p>Mang theo chính những công việc đang ngốn thời gian của bạn tới lớp học.</p>
+                <div class="methodology-steps">
+                    <div class="step-card">
+                        <div class="step-header">
+                            <span class="step-number">01</span>
+                            <span class="step-icon">📋</span>
+                        </div>
+                        <h4>Mang công việc thật</h4>
+                        <p>Bạn đem trực tiếp các tình huống quản lý, file báo cáo thô, và tiến độ thực tế đang làm bạn đau đầu đến lớp.</p>
                     </div>
-                    <div class="logic-card">
-                        <div class="logic-num">02</div>
-                        <p>Trực tiếp xây dựng quy trình tự động hóa các đầu việc đó ngay tại lớp.</p>
+                    <div class="step-card">
+                        <div class="step-header">
+                            <span class="step-number">02</span>
+                            <span class="step-icon">⚙️</span>
+                        </div>
+                        <h4>Xây quy trình tại lớp</h4>
+                        <p>Không nghe lý thuyết suông. Bạn tự tay thiết lập và chạy thành công workflow tự động hóa đầu tiên ngay trong ngày học.</p>
                     </div>
-                    <div class="logic-card">
-                        <div class="logic-num">03</div>
-                        <p>Phân định rõ phần việc AI tự làm, phần việc hỗ trợ và phần bạn ra quyết định.</p>
+                    <div class="step-card">
+                        <div class="step-header">
+                            <span class="step-number">03</span>
+                            <span class="step-icon">🧠</span>
+                        </div>
+                        <h4>Làm chủ phân định việc</h4>
+                        <p>Học cách làm chủ tư duy hệ thống: khi nào giao việc cho Claude Cowork xử lý, khi nào kích hoạt Claude Code vận hành.</p>
                     </div>
                 </div>
-
-                <div class="tools-comparison">
-                    <div class="tool-box">
-                        <div class="tool-badge">Dành cho công việc tri thức</div>
-                        <h3>Claude Cowork</h3>
-                        <p>Công cụ mang tính agentic để làm việc trực tiếp với file, ứng dụng và các tác vụ thực tế mỗi ngày.</p>
+                
+                <div class="tools-clarity-box">
+                    <div class="tool-desc-card">
+                        <h5>🤖 Claude Cowork: Trợ lý tri thức</h5>
+                        <p>Phù hợp xử lý: Biên bản họp, viết action item, phân tích email, tổng hợp tài liệu quản lý.</p>
                     </div>
-                    <div class="tool-divider">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                    </div>
-                    <div class="tool-box highlight">
-                        <div class="tool-badge">Dành cho automation chuyên sâu</div>
-                        <h3>Claude Code</h3>
-                        <p>Mở rộng sang các luồng logic lập trình và tự động hóa sâu hơn khi bạn cần chuẩn hóa toàn bộ quy trình.</p>
+                    <div class="tool-desc-card">
+                        <h5>💻 Claude Code: Tự động hóa sâu</h5>
+                        <p>Phù hợp vận hành: Hệ thống tự động gửi nhắc nhở tiến độ, crawl dữ liệu đa nguồn, đồng bộ báo cáo tuần.</p>
                     </div>
                 </div>
 
@@ -427,21 +452,33 @@
                 <p class="section-subtitle text-center">Khi kết thúc ngày học, bạn sẽ mang về:</p>
 
                 <div class="deliverables-grid">
-                    <div class="deliverable-item">
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span>1 quy trình tự động hóa dành riêng cho công việc quản lý của bạn.</span>
+                    <div class="deliverable-card">
+                        <span class="deliv-icon">✓</span>
+                        <div class="deliv-content">
+                            <strong>1 Quy trình AI hoàn chỉnh</strong>
+                            <p>Quy trình được cá nhân hóa và chạy thực tế dựa trên đúng công việc quản lý thô bạn mang tới.</p>
+                        </div>
                     </div>
-                    <div class="deliverable-item">
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span>1 bộ mẫu câu lệnh (prompt) dùng ngay cho họp hành, báo cáo và nhắc tiến độ.</span>
+                    <div class="deliverable-card">
+                        <span class="deliv-icon">✓</span>
+                        <div class="deliv-content">
+                            <strong>1 Bộ prompt & pattern dùng ngay</strong>
+                            <p>Mẫu prompt thực chiến đã tối ưu hóa cho viết action item, biên bản họp và merge dữ liệu báo cáo.</p>
+                        </div>
                     </div>
-                    <div class="deliverable-item">
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span>Phương pháp ứng dụng Claude Cowork để tổng hợp tài liệu thực tế.</span>
+                    <div class="deliverable-card">
+                        <span class="deliv-icon">✓</span>
+                        <div class="deliv-content">
+                            <strong>Phương pháp dùng Claude Cowork</strong>
+                            <p>Tư duy giao việc chuẩn xác cho trợ lý ảo thay vì hỏi đáp vụn vặt mất thời gian.</p>
+                        </div>
                     </div>
-                    <div class="deliverable-item">
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span>Bản kế hoạch hành động 7 ngày để đưa cách làm mới vào công việc ngay.</span>
+                    <div class="deliverable-card">
+                        <span class="deliv-icon">✓</span>
+                        <div class="deliv-content">
+                            <strong>Kế hoạch hành động 7 ngày</strong>
+                            <p>Lộ trình chi tiết từng ngày sau lớp học để duy trì và đưa hệ thống AI chạy ổn định trong thực tế.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -487,23 +524,9 @@
 
                     <!-- Pricing Box -->
                     <div class="pricing-card">
-                        <div class="pricing-scarcity-pill">Hạn chế: Chỉ mở 25 chỗ ngồi</div>
+                        <div class="pricing-scarcity-pill">⚠️ Chỉ còn 7/25 chỗ ngồi ưu đãi cuối cùng</div>
+                        <div class="pricing-seats-urgency">Đăng ký sẽ đóng sớm khi đủ số lượng học viên giữ chỗ. Hạn chót: Thứ 4, 10/06.</div>
                         <div class="pricing-amount">997.000đ</div>
-                        
-                        <!-- Real-time dynamic Countdown -->
-                        <div class="countdown-wrapper">
-                            <span class="countdown-label">Thời gian giữ giá ưu đãi còn:</span>
-                            <div class="countdown-timer">
-                                <div class="timer-unit"><span id="days">00</span><span class="unit-label">Ngày</span></div>
-                                <div class="timer-colon">:</div>
-                                <div class="timer-unit"><span id="hours">00</span><span class="unit-label">Giờ</span></div>
-                                <div class="timer-colon">:</div>
-                                <div class="timer-unit"><span id="minutes">00</span><span class="unit-label">Phút</span></div>
-                                <div class="timer-colon">:</div>
-                                <div class="timer-unit"><span id="seconds">00</span><span class="unit-label">Giây</span></div>
-                            </div>
-                            <span class="countdown-deadline">Đóng đăng ký: hết thứ 4, 10/06, hoặc khi đủ chỗ</span>
-                        </div>
 
                         <!-- Registration Trigger CTA -->
                         <button id="register-trigger-btn" class="btn btn-primary btn-block btn-lg">Giữ chỗ ngay</button>
@@ -514,6 +537,33 @@
                         </div>
                         
                         <p class="pricing-footer-copy">Bạn không trả tiền để nghe. <strong>Bạn trả tiền để đổi cách làm việc.</strong></p>
+                    </div>
+
+                    <!-- ROI Calculator Box -->
+                    <div class="roi-calculator-box">
+                        <h5>📈 Tính toán hoàn vốn đầu tư (ROI)</h5>
+                        <div class="roi-breakdown">
+                            <p>Nếu workflow AI giúp bạn tiết kiệm <strong>3 giờ/tuần</strong>:</p>
+                            <ul class="roi-math-list">
+                                <li>Mức lương quản lý trung bình thực tế: <strong>40.000đ/giờ</strong></li>
+                                <li>Tiết kiệm mỗi tuần: 3h × 40K = <strong>120.000đ</strong></li>
+                                <li>Tiết kiệm mỗi tháng: 120K × 4 = <strong>480.000đ</strong></li>
+                            </ul>
+                            <p class="roi-conclusion">
+                                → Chỉ sau <strong>2 tháng</strong>, bạn đã thu hồi hoàn toàn chi phí 997K.<br>
+                                Từ tháng thứ 3 trở đi, mỗi tháng bạn "kiếm" thêm 480K chỉ nhờ workflow này chạy tự động.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Guarantee Box B2B -->
+                    <div class="guarantee-box">
+                        <div class="guarantee-icon">🛡️</div>
+                        <div class="guarantee-content">
+                            <h4>Cam kết chất lượng 100%</h4>
+                            <p>Nếu sau buổi học bạn không thiết lập được ít nhất <strong>1 workflow AI chạy thực tế</strong> cho công việc của mình, hãy gửi email cho chúng tôi trong vòng <strong>7 ngày</strong>.</p>
+                            <p>Chúng tôi sẽ <strong>hoàn lại 100% học phí</strong> lập tức hoặc **hỗ trợ tư vấn 1-on-1** cùng đội ngũ kỹ thuật của Sunext cho đến khi bạn vận hành thành công — bạn tự chọn phương án phù hợp nhất.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -672,6 +722,28 @@
                         </button>
                         <div class="faq-answer">
                             <p>Đây là nỗi lo thực tế, và đó là lý do khóa học có sẵn kế hoạch hành động 7 ngày sau lớp học. Bạn sẽ có người đồng hành hỗ trợ trong tuần đầu tiên để đảm bảo quy trình chạy được.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Tôi cần chuẩn bị những gì trước buổi học?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Bạn chỉ cần chuẩn bị laptop cá nhân, cài đặt sẵn trình duyệt Chrome, đăng ký tài khoản Claude (bản miễn phí hoặc Pro đều được), và mang theo 2-3 tài liệu thô hoặc tình huống công việc thực tế đang gặp khó khăn để thực hành ngay tại lớp.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 7 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Có sự hỗ trợ nào sau khi lớp học kết thúc không?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Có. Bạn sẽ được tham gia nhóm Zalo hỗ trợ kín của Sunext AI trong vòng 30 ngày để trao đổi, sửa lỗi câu lệnh trực tiếp. Ngoài ra, sau 2 tuần chúng ta sẽ có 1 buổi Q&A online trực tiếp với anh Lý Đức Toàn để giải quyết triệt để các vấn đề phát sinh khi áp dụng vào doanh nghiệp thực tế.</p>
                         </div>
                     </div>
                 </div>
