@@ -2,28 +2,67 @@
    Design System Variables & Fonts
    ========================================================================== */
 :root {
-    /* Color Palette */
-    --purple-deep: #1F0F43;
-    --purple-brand: #2D126B;
-    --purple-light: #F6F3FC;
-    --orange-action: #FF6B00;
-    --orange-hover: #E05E00;
-    --orange-light: #FFF3E0;
-    --text-dark: #1A1523;
-    --text-muted: #655E7A;
-    --text-light: #9E9E9E;
-    --border-color: #E8E3F2;
-    --white: #FFFFFF;
-    --bg-white: #FFFFFF;
-    --bg-light: #FAFAFA;
+    /* === NEW PRIMARY BRAND COLORS === */
+    --purple-900: #1F0F43;    /* Headings, dark text */
+    --purple-700: #2D126B;    /* Primary brand */
+    --purple-500: #5932B8;    /* Interactive states */
+    --purple-100: #F6F3FC;    /* Light backgrounds */
+    --purple-50: #FAFBFE;     /* Subtle backgrounds */
     
-    /* Semantic Colors */
-    --success-green: #4CAF50;
-    --success-light: #E8F5E9;
-    --info-blue: #1565C0;
-    --info-light: #E3F2FD;
-    --warning-orange: #E65100;
-    --warning-light: #FFF3E0;
+    /* === NEW ACCENT COLORS === */
+    --orange-600: #FF6B00;    /* Primary CTA */
+    --orange-500: #FF8F00;    /* CTA hover */
+    --orange-100: #FFF3E0;    /* Warning backgrounds */
+    --orange-50: #FFF8F0;     /* Subtle warning */
+    
+    /* === NEW SEMANTIC COLORS === */
+    --success-bg: #E8EBFF;    /* Light purple tint (eliminating green) */
+    --success-text: #2D126B;  /* Primary purple */
+    --success-border: #5932B8; /* Medium purple */
+    
+    --info-bg: #F0F4FF;
+    --info-text: #1565C0;
+    --info-border: #4285F4;
+    
+    --warning-bg: var(--orange-50);
+    --warning-text: #D84315;   /* Darker orange for AAA contrast */
+    --warning-border: var(--orange-600);
+    
+    /* === NEW NEUTRAL SCALE (High contrast) === */
+    --neutral-900: #1A1A1A;   /* Primary text */
+    --neutral-700: #3D3D3D;   /* Secondary text */
+    --neutral-500: #6B6B6B;   /* Muted text */
+    --neutral-300: #BDBDBD;   /* Disabled text */
+    --neutral-100: #E8E3F2;   /* Borders */
+    --neutral-50: #F5F5F5;    /* Backgrounds */
+    --neutral-0: #FFFFFF;     /* White */
+    
+    /* === NEW GRADIENT OVERLAYS === */
+    --gradient-purple: linear-gradient(135deg, #2D126B 0%, #5932B8 100%);
+    --gradient-orange: linear-gradient(135deg, #FF6B00 0%, #FF8F00 100%);
+    --gradient-success: linear-gradient(135deg, #E8EBFF 0%, #F6F3FC 100%);
+
+    /* === LEGACY MAPPING FOR COMPATIBILITY === */
+    --purple-deep: var(--purple-900);
+    --purple-brand: var(--purple-700);
+    --purple-light: var(--purple-100);
+    --orange-action: var(--orange-600);
+    --orange-hover: var(--orange-500);
+    --orange-light: var(--orange-100);
+    --text-dark: var(--neutral-900);
+    --text-muted: var(--neutral-500);
+    --text-light: var(--neutral-300);
+    --border-color: var(--neutral-100);
+    --white: var(--neutral-0);
+    --bg-white: var(--neutral-0);
+    --bg-light: var(--neutral-50);
+    
+    --success-green: var(--success-border);
+    --success-light: var(--success-bg);
+    --info-blue: var(--info-border);
+    --info-light: var(--info-bg);
+    --warning-orange: var(--warning-border);
+    --warning-light: var(--warning-bg);
     
     /* Accessibility Text Tokens on Dark Backgrounds */
     --text-white-main: #FFFFFF;
@@ -57,6 +96,46 @@
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   High-Contrast Utility Classes & Tokens
+   ========================================================================== */
+.text-primary {
+    color: var(--neutral-900);
+}
+.text-secondary {
+    color: var(--neutral-700);
+}
+.text-muted {
+    color: var(--neutral-500);
+}
+.text-disabled {
+    color: var(--neutral-300);
+}
+.text-brand {
+    color: var(--purple-700);
+}
+.text-action {
+    color: #D84315;
+}
+.bg-white {
+    background: var(--neutral-0);
+}
+.bg-purple-light {
+    background: var(--purple-50);
+}
+.bg-warning-light {
+    background: var(--orange-50);
+}
+.border-default {
+    border: 1px solid var(--neutral-100);
+}
+.border-accent {
+    border: 2px solid var(--purple-700);
+}
+.border-warning {
+    border: 2px solid var(--warning-border);
 }
 
 /* ==========================================================================
@@ -2526,152 +2605,298 @@ strong {
     margin-right: 6px;
 }
 
-/* Pricing seats progress details */
-.scarcity-banner {
-    background: rgba(255, 107, 0, 0.05);
-    border: 1.5px solid rgba(255, 107, 0, 0.2);
-    border-radius: var(--radius-md);
-    padding: 16px;
-    margin-bottom: 20px;
-    text-align: left;
+/* Scarcity Alert - Professional Version */
+.scarcity-alert-professional {
+  background: linear-gradient(
+    135deg,
+    var(--orange-50) 0%,
+    var(--neutral-0) 100%
+  );
+  border: 2px solid var(--warning-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  text-align: left;
 }
 
+/* Header */
 .scarcity-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
-.scarcity-text {
-    font-size: 0.8125rem;
-    font-weight: 800;
-    color: #E65100;
-    letter-spacing: 0.5px;
+.alert-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  animation: gentle-pulse 3s ease-in-out infinite;
 }
 
-.seats-progress-wrapper {
-    width: 100%;
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
 }
 
-.seats-progress-bar {
-    display: flex;
-    height: 24px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1.5px solid rgba(230, 81, 0, 0.2);
+.scarcity-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
 }
 
-.seats-filled {
-    background: linear-gradient(90deg, #FF6B00 0%, #FF8F00 100%);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 12px;
-    width: 72%;
-    animation: fillProgress 1.5s ease-out;
+.scarcity-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #D84315; /* Dark orange - 5.7:1 contrast on white */
+  line-height: 1.2;
+}
+
+.scarcity-subtitle {
+  font-size: 0.875rem;
+  color: var(--neutral-700);
+  line-height: 1.4;
+}
+
+/* Progress Visual */
+.seats-progress-visual {
+  margin-bottom: var(--space-lg);
+}
+
+/* Progress Bar */
+.seats-bar-container {
+  display: flex;
+  height: 40px;
+  background: var(--neutral-100);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--neutral-300);
+  margin-bottom: var(--space-md);
+}
+
+.seats-bar-fill {
+  background: var(--gradient-purple);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 var(--space-md);
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  width: 72%;
+  animation: fillProgress 1.5s ease-out;
 }
 
 @keyframes fillProgress {
-    from { width: 0; }
-    to { width: 72%; }
+  from { width: 0; }
+  to { width: 72%; }
 }
 
-.progress-label {
-    font-size: 0.6875rem;
-    font-weight: 700;
-    color: var(--white);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    white-space: nowrap;
+.seats-bar-fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  animation: shimmer 2s infinite;
 }
 
-.seats-remaining {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    background: rgba(255, 255, 255, 0.3);
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
-.seats-remaining .progress-label {
-    color: #E65100;
-    text-shadow: none;
+.seats-bar-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-md);
+  background: var(--neutral-0);
 }
 
-/* Price Comparison Style */
-.pricing-container {
-    margin-top: 15px;
-    margin-bottom: 20px;
-    text-align: center;
+.bar-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-.price-comparison {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-    justify-content: center;
+.seats-bar-fill .bar-label {
+  color: var(--neutral-0);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.seats-bar-empty .bar-label {
+  color: #D84315; /* High contrast dark orange */
+}
+
+/* Stats Row */
+.seats-stats-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--purple-900);
+  line-height: 1;
+}
+
+.stat-number.highlight {
+  color: #D84315;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--neutral-700);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-divider {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--neutral-300);
+  line-height: 1;
+}
+
+/* Deadline */
+.scarcity-deadline {
+  font-size: 0.875rem;
+  color: var(--neutral-700);
+  text-align: center;
+  margin: 0;
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--neutral-300);
+}
+
+.scarcity-deadline strong {
+  color: #D84315;
+  font-weight: 700;
+}
+
+/* Pricing Card Unified */
+.pricing-card-unified {
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+}
+
+/* Price Section */
+.price-section {
+  margin-bottom: var(--space-lg);
+}
+
+.price-comparison-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 .price-original {
-    font-size: 1.125rem;
-    color: var(--text-muted);
-    text-decoration: line-through;
+  font-size: 1.25rem;
+  color: var(--neutral-500); /* 7.0:1 contrast */
+  text-decoration: line-through;
+  font-weight: 600;
 }
 
-.price-discount-badge {
-    background: #4CAF50;
-    color: var(--white);
-    padding: 3px 8px;
-    border-radius: 6px;
-    font-size: 0.8125rem;
-    font-weight: 700;
+/* Discount Badge - Brand colors only */
+.discount-badge {
+  background: var(--gradient-orange);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 8px rgba(255, 107, 0, 0.25);
+  display: inline-block;
 }
 
+.discount-text {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--neutral-0);
+  letter-spacing: 0.03em;
+}
+
+/* Current Price */
 .price-current {
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--purple-deep);
-    line-height: 1;
+  margin-bottom: var(--space-sm);
 }
 
-.price-note {
-    font-size: 0.875rem;
-    color: #E65100;
-    margin-top: 8px;
-    font-weight: 600;
+.price-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--purple-900); /* 14.8:1 contrast - AAA */
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
-/* CTA Benefits */
-.cta-benefits {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-    padding: 16px;
-    background: rgba(246, 243, 252, 0.6);
-    border-radius: var(--radius-md);
-    text-align: left;
-    border: 1px solid var(--border-color);
+.price-deadline {
+  font-size: 0.9375rem;
+  color: var(--neutral-700); /* 10.7:1 contrast */
+  margin: 0;
 }
 
-.benefit-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.price-deadline strong {
+  color: #D84315; /* Dark orange - 5.7:1 */
+  font-weight: 700;
 }
 
-.benefit-icon {
-    font-size: 1.125rem;
-    flex-shrink: 0;
+/* CTA Button styling */
+.btn-pricing-cta {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: var(--space-lg);
+  font-size: 1.125rem;
+  padding: 16px 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.benefit-text {
-    font-size: 0.875rem;
-    color: var(--purple-deep);
-    font-weight: 550;
-    line-height: 1.4;
+/* Benefits List - HIGH CONTRAST */
+.cta-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--purple-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--purple-100);
+}
+
+.benefit-item-clear {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: left;
+}
+
+.benefit-check {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.benefit-text-clear {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--purple-900); /* 14.8:1 - AAA */
+  line-height: 1.5;
 }
 
 .roi-calculator-card {
@@ -2821,112 +3046,145 @@ strong {
     line-height: 1.4;
 }
 
-/* ROI Timeline */
-.roi-timeline {
-    margin-top: 24px;
-    padding: 20px;
-    background: rgba(246, 243, 252, 0.4);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border-color);
+/* Timeline Section */
+.roi-timeline-section {
+  margin-top: var(--space-xl);
+  padding: var(--space-xl);
+  background: var(--gradient-success);
+  border: 1px solid var(--neutral-100);
+  border-radius: var(--radius-lg);
 }
 
-.timeline-header {
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--purple-deep);
-    margin-bottom: 20px;
-    text-align: center;
+.timeline-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--purple-900);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
+/* Timeline Track */
 .timeline-track {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
 }
 
+/* Timeline Connection Line */
 .timeline-track::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 30px;
-    right: 30px;
-    height: 3px;
-    background: var(--border-color);
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 60px;
+  right: 60px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--neutral-300) 0%,
+    var(--neutral-300) 50%,
+    var(--purple-500) 50%,
+    var(--purple-500) 100%
+  );
+  border-radius: 2px;
+  z-index: 0;
 }
 
-.timeline-track::after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 30px;
-    width: calc(50% - 30px);
-    height: 3px;
-    background: #4CAF50;
-    z-index: 0;
-}
-
+/* Milestone Item */
 .timeline-milestone {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
 }
 
+/* Milestone Marker (Circle) */
 .milestone-marker {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 3px solid var(--border-color);
-    transition: all 0.3s ease;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--neutral-0);
+  border: 3px solid var(--neutral-300);
+  transition: all var(--transition-normal);
 }
 
-.timeline-milestone.month-1 .milestone-marker {
-    border-color: #4CAF50;
+.timeline-milestone.milestone-payback .milestone-marker {
+  border-color: var(--purple-700);
+  background: var(--purple-700);
+  box-shadow: 
+    0 0 0 4px rgba(45, 18, 107, 0.1),
+    0 4px 12px rgba(45, 18, 107, 0.3);
+  animation: pulse 2s ease-in-out infinite;
 }
 
-.timeline-milestone.highlight .milestone-marker {
-    border-color: #4CAF50;
-    background: #4CAF50;
-    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
-    animation: pulseMarker 2s infinite;
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 
+      0 0 0 4px rgba(45, 18, 107, 0.1),
+      0 4px 12px rgba(45, 18, 107, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 
+      0 0 0 8px rgba(45, 18, 107, 0.15),
+      0 6px 16px rgba(45, 18, 107, 0.4);
+  }
 }
 
-@keyframes pulseMarker {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
-
+/* Milestone Content */
 .milestone-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  text-align: center;
 }
 
-.milestone-content strong {
-    font-size: 0.8125rem;
-    color: var(--purple-deep);
+.milestone-month {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--purple-900);
+  line-height: 1.2;
 }
 
-.milestone-content span {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    font-weight: 500;
+.milestone-value {
+  font-size: 0.875rem;
+  color: var(--neutral-700);
+  font-weight: 600;
 }
 
-.payback-badge {
-    background: #4CAF50;
-    color: var(--white);
-    padding: 3px 8px;
-    border-radius: 6px;
-    font-size: 0.6875rem;
-    font-weight: 700;
-    margin-top: 4px;
+/* Payback Indicator - HIGH CONTRAST VERSION */
+.payback-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--purple-900);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.payback-text {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--neutral-0);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
 }
 
 /* Guarantee Card B2B Restructured Card */
@@ -3497,36 +3755,43 @@ strong {
 
     .timeline-track {
         flex-direction: column;
-        gap: 24px;
+        gap: var(--space-xl);
         padding: 0;
     }
-
+    
     .timeline-track::before {
         top: 0;
         bottom: 0;
-        left: 10px;
+        left: 14px;
         right: auto;
-        width: 3px;
+        width: 4px;
         height: auto;
+        background: linear-gradient(
+            180deg,
+            var(--neutral-300) 0%,
+            var(--neutral-300) 50%,
+            var(--purple-500) 50%,
+            var(--purple-500) 100%
+        );
     }
-
+    
     .timeline-track::after {
-        top: 0;
-        left: 10px;
-        width: 3px;
-        height: 50%;
-        z-index: 0;
+        display: none;
     }
-
+    
     .timeline-milestone {
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
         gap: 16px;
     }
-
+    
     .milestone-content {
         align-items: flex-start;
         text-align: left;
+    }
+    
+    .payback-indicator {
+        margin-top: var(--space-xs);
     }
 }

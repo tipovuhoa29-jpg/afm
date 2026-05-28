@@ -547,47 +547,98 @@
 
                     <!-- Pricing Box -->
                     <div class="pricing-card">
-                        <!-- Seats Progress Bar Visual -->
-                        <div class="scarcity-banner">
+                        <!-- Seats Progress Bar Visual - High Contrast Redesign -->
+                        <div class="scarcity-alert-professional">
                             <div class="scarcity-header">
-                                <span class="warning-icon">⚠️</span>
-                                <span class="scarcity-text">CHỈ CÒN 7/25 CHỖ NGỒI ƯU ĐÃI CUỐI CÙNG</span>
+                                <svg class="alert-icon" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="#D84315" stroke-width="2" fill="#FFF8F0"/>
+                                    <path d="M12 8V12M12 16H12.01" stroke="#D84315" stroke-width="2.5" stroke-linecap="round"/>
+                                </svg>
+                                <div class="scarcity-text-group">
+                                    <strong class="scarcity-title">Sắp đầy chỗ</strong>
+                                    <span class="scarcity-subtitle">Đăng ký đóng sớm khi đủ số lượng</span>
+                                </div>
                             </div>
-                            <div class="seats-progress-wrapper">
-                                <div class="seats-progress-bar">
-                                    <div class="seats-filled" style="width: 72%">
-                                        <span class="progress-label">18 chỗ đã giữ</span>
+                            
+                            <div class="seats-progress-visual">
+                                <!-- Progress Bar -->
+                                <div class="seats-bar-container">
+                                    <div class="seats-bar-fill" style="width: 72%">
+                                        <span class="bar-label">18 chỗ đã giữ</span>
                                     </div>
-                                    <div class="seats-remaining">
-                                        <span class="progress-label">7 chỗ còn lại</span>
+                                    <div class="seats-bar-empty">
+                                        <span class="bar-label">7 chỗ còn lại</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Stats Row -->
+                                <div class="seats-stats-row">
+                                    <div class="stat-item">
+                                        <span class="stat-number">18</span>
+                                        <span class="stat-label">đã đăng ký</span>
+                                    </div>
+                                    <div class="stat-divider">/</div>
+                                    <div class="stat-item">
+                                        <span class="stat-number highlight">7</span>
+                                        <span class="stat-label">chỗ còn lại</span>
                                     </div>
                                 </div>
                             </div>
+                            
+                            <p class="scarcity-deadline">
+                                Hạn chót đăng ký: <strong>Thứ 4, 10/06</strong>
+                            </p>
                         </div>
-                        <div class="pricing-seats-urgency">Đăng ký sẽ đóng sớm khi đủ số lượng học viên giữ chỗ. Hạn chót: Thứ 4, 10/06.</div>
                         
-                        <!-- Price Comparison Context -->
-                        <div class="pricing-container">
-                            <div class="price-comparison">
-                                <span class="price-original">1.497.000đ</span>
-                                <span class="price-discount-badge">-33%</span>
+                        <!-- Price Comparison Context - High Contrast Redesign -->
+                        <div class="pricing-card-unified">
+                            <!-- Price Comparison -->
+                            <div class="price-section">
+                                <div class="price-comparison-row">
+                                    <span class="price-original">1.497.000đ</span>
+                                    <div class="discount-badge">
+                                        <span class="discount-text">Giảm 33%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="price-current">
+                                    <span class="price-number">997.000đ</span>
+                                </div>
+                                
+                                <p class="price-deadline">
+                                    Giá ưu đãi kết thúc <strong>Thứ 4, 10/06</strong>
+                                </p>
                             </div>
-                            <div class="price-current">997.000đ</div>
-                            <p class="price-note">Giá ưu đãi kết thúc Thứ 4, 10/06</p>
-                        </div>
-
-                        <!-- Registration Trigger CTA -->
-                        <button id="register-trigger-btn" class="btn btn-primary btn-block btn-lg">Giữ chỗ ngay</button>
-                        
-                        <!-- Restructured CTA Benefits -->
-                        <div class="cta-benefits">
-                            <div class="benefit-item">
-                                <span class="benefit-icon">⚡</span>
-                                <span class="benefit-text">Nhận checklist chuẩn bị ngay sau đăng ký</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-icon">🎯</span>
-                                <span class="benefit-text">Không cần kiến thức lập trình hay kỹ thuật vẫn áp dụng dễ dàng</span>
+                            
+                            <!-- CTA Button -->
+                            <button id="register-trigger-btn" class="btn btn-primary btn-block btn-lg btn-pricing-cta">
+                                <span class="btn-text">Giữ chỗ ngay</span>
+                                <svg class="btn-icon" viewBox="0 0 20 20" style="width: 20px; height: 20px; margin-left: 8px;">
+                                    <path d="M13 10L8 5L9.5 3.5L17 10L9.5 16.5L8 15L13 10Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                            
+                            <!-- Benefits - HIGH CONTRAST -->
+                            <div class="cta-benefits-list">
+                                <div class="benefit-item-clear">
+                                    <svg class="benefit-check" viewBox="0 0 20 20" style="width: 20px; height: 20px; flex-shrink: 0; margin-right: 8px;">
+                                        <circle cx="10" cy="10" r="9" fill="var(--purple-100)"/>
+                                        <path d="M6 10L9 13L14 7" stroke="var(--purple-700)" stroke-width="2.5" stroke-linecap="round"/>
+                                    </svg>
+                                    <span class="benefit-text-clear">
+                                        Nhận checklist chuẩn bị ngay sau đăng ký
+                                    </span>
+                                </div>
+                                
+                                <div class="benefit-item-clear">
+                                    <svg class="benefit-check" viewBox="0 0 20 20" style="width: 20px; height: 20px; flex-shrink: 0; margin-right: 8px;">
+                                        <circle cx="10" cy="10" r="9" fill="var(--purple-100)"/>
+                                        <path d="M6 10L9 13L14 7" stroke="var(--purple-700)" stroke-width="2.5" stroke-linecap="round"/>
+                                    </svg>
+                                    <span class="benefit-text-clear">
+                                        Không cần kiến thức lập trình hay kỹ thuật
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         
@@ -666,8 +717,8 @@
                                 <div class="roi-conclusion-icon-container">
                                     <!-- Custom SVG checkmark seal -->
                                     <svg class="conclusion-icon" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="10" stroke="var(--success-green)" stroke-width="2" fill="var(--success-light)"/>
-                                        <path d="M9 12L11 14L15 10" stroke="var(--success-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="12" r="10" stroke="var(--success-border)" stroke-width="2" fill="var(--success-bg)"/>
+                                        <path d="M9 12L11 14L15 10" stroke="var(--success-border)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
                                 <div class="conclusion-text">
@@ -677,32 +728,42 @@
                             </div>
                         </div>
 
-                        <!-- ROI Payback Timeline Visual -->
-                        <div class="roi-timeline">
-                            <div class="timeline-header">Lộ trình hoàn vốn thực tế</div>
+                        <!-- ROI Payback Timeline Visual - High Contrast Redesign -->
+                        <div class="roi-timeline-section">
+                            <h4 class="timeline-heading">Lộ trình hoàn vốn thực tế</h4>
+                            
                             <div class="timeline-track">
-                                <div class="timeline-milestone month-1">
+                                <!-- Tháng 1 -->
+                                <div class="timeline-milestone">
                                     <div class="milestone-marker"></div>
                                     <div class="milestone-content">
-                                        <strong>Tháng 1</strong>
-                                        <span>+480K</span>
+                                        <strong class="milestone-month">Tháng 1</strong>
+                                        <span class="milestone-value">+480K</span>
                                     </div>
                                 </div>
                                 
-                                <div class="timeline-milestone month-2 highlight">
-                                    <div class="milestone-marker"></div>
+                                <!-- Tháng 2 - PAYBACK POINT -->
+                                <div class="timeline-milestone milestone-payback">
+                                    <div class="milestone-marker marker-highlight"></div>
                                     <div class="milestone-content">
-                                        <strong>Tháng 2</strong>
-                                        <span>+480K</span>
-                                        <span class="payback-badge">✓ Hoàn vốn 997K</span>
+                                        <strong class="milestone-month">Tháng 2</strong>
+                                        <span class="milestone-value">+480K</span>
+                                        <div class="payback-indicator">
+                                            <svg class="check-icon" viewBox="0 0 20 20">
+                                                <circle cx="10" cy="10" r="9" fill="var(--purple-700)" stroke="var(--purple-900)" stroke-width="1.5"/>
+                                                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span class="payback-text">Hoàn vốn 997K</span>
+                                        </div>
                                     </div>
                                 </div>
                                 
-                                <div class="timeline-milestone month-3-plus">
+                                <!-- Tháng 3+ -->
+                                <div class="timeline-milestone">
                                     <div class="milestone-marker"></div>
                                     <div class="milestone-content">
-                                        <strong>Tháng 3+</strong>
-                                        <span>Lợi nhuận ròng</span>
+                                        <strong class="milestone-month">Tháng 3+</strong>
+                                        <span class="milestone-value">Lợi nhuận ròng</span>
                                     </div>
                                 </div>
                             </div>
@@ -714,10 +775,10 @@
                         <!-- 100% No Risk SVG Stamp -->
                         <div class="no-risk-stamp">
                             <svg class="stamp-svg" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45" fill="none" stroke="var(--success-green)" stroke-width="3" stroke-dasharray="5,5"/>
-                                <text x="50" y="42" text-anchor="middle" font-size="11" font-weight="700" fill="var(--success-green)">100% KHÔNG</text>
-                                <text x="50" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="var(--success-green)">RỦI RO</text>
-                            </svg>
+                                        <circle cx="50" cy="50" r="45" fill="none" stroke="var(--success-border)" stroke-width="3" stroke-dasharray="5,5"/>
+                                        <text x="50" y="42" text-anchor="middle" font-size="11" font-weight="700" fill="var(--success-border)">100% KHÔNG</text>
+                                        <text x="50" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="var(--success-border)">RỦI RO</text>
+                                    </svg>
                         </div>
 
                         <div class="card-header">
@@ -750,8 +811,8 @@
                                     <div class="option-icon-wrapper">
                                         <!-- Refund Coin SVG Icon -->
                                         <svg class="option-icon" viewBox="0 0 24 24" fill="none">
-                                            <circle cx="12" cy="12" r="10" stroke="var(--success-green)" stroke-width="2" fill="var(--success-light)"/>
-                                            <path d="M8 12H16M12 8V16" stroke="var(--success-green)" stroke-width="2" stroke-linecap="round"/>
+                                            <circle cx="12" cy="12" r="10" stroke="var(--success-border)" stroke-width="2" fill="var(--success-bg)"/>
+                                            <path d="M8 12H16M12 8V16" stroke="var(--success-border)" stroke-width="2" stroke-linecap="round"/>
                                         </svg>
                                     </div>
                                     <div class="option-content">
