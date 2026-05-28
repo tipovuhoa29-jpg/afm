@@ -309,7 +309,14 @@
                                         <!-- Task 1: Landing Page -->
                                         <div class="task-card status-clear">
                                             <div class="task-card-header">
-                                                <span class="task-cat">📋 LANDING PAGE</span>
+                                                <span class="task-cat">
+                                                    <!-- Custom SVG Document Icon -->
+                                                    <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <rect x="4" y="3" width="16" height="18" rx="2" stroke="var(--purple-brand)" stroke-width="2" fill="var(--purple-light)"/>
+                                                        <path d="M8 7H16M8 11H16M8 15H12" stroke="var(--purple-brand)" stroke-width="2" stroke-linecap="round"/>
+                                                    </svg>
+                                                    LANDING PAGE
+                                                </span>
                                                 <span class="status-badge clear">Rõ ràng</span>
                                             </div>
                                             <div class="task-title">Layout thô hoàn tất trước Thứ 6</div>
@@ -322,7 +329,14 @@
                                         <!-- Task 2: Facebook Ads -->
                                         <div class="task-card status-action">
                                             <div class="task-card-header">
-                                                <span class="task-cat">💰 FACEBOOK ADS</span>
+                                                <span class="task-cat">
+                                                    <!-- Custom SVG Clock/Ad Icon -->
+                                                    <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <circle cx="12" cy="12" r="9" stroke="var(--orange-action)" stroke-width="2" fill="rgba(255, 107, 0, 0.1)"/>
+                                                        <path d="M12 6V12M12 12L15 9M12 12L9 15" stroke="var(--orange-action)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    FACEBOOK ADS
+                                                </span>
                                                 <span class="status-badge action">Hành động</span>
                                             </div>
                                             <div class="task-title">Test 3 audience mới giảm CPC</div>
@@ -335,7 +349,16 @@
                                         <!-- Task 3: Báo cáo -->
                                         <div class="task-card status-waiting">
                                             <div class="task-card-header">
-                                                <span class="task-cat">📊 BÁO CÁO TIẾN ĐỘ</span>
+                                                <span class="task-cat">
+                                                    <!-- Custom SVG Chart Icon -->
+                                                    <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M3 17V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V17" stroke="var(--purple-brand)" stroke-width="2"/>
+                                                        <rect x="7" y="12" width="3" height="5" fill="var(--purple-brand)"/>
+                                                        <rect x="13" y="8" width="3" height="9" fill="var(--orange-action)"/>
+                                                        <rect x="19" y="4" width="3" height="13" fill="var(--purple-deep)"/>
+                                                    </svg>
+                                                    BÁO CÁO TIẾN ĐỘ
+                                                </span>
                                                 <span class="status-badge waiting">Chờ data</span>
                                             </div>
                                             <div class="task-title">Báo cáo Tetra Pak - đợi kế toán</div>
@@ -524,45 +547,241 @@
 
                     <!-- Pricing Box -->
                     <div class="pricing-card">
-                        <div class="pricing-scarcity-pill">⚠️ Chỉ còn 7/25 chỗ ngồi ưu đãi cuối cùng</div>
+                        <!-- Seats Progress Bar Visual -->
+                        <div class="scarcity-banner">
+                            <div class="scarcity-header">
+                                <span class="warning-icon">⚠️</span>
+                                <span class="scarcity-text">CHỈ CÒN 7/25 CHỖ NGỒI ƯU ĐÃI CUỐI CÙNG</span>
+                            </div>
+                            <div class="seats-progress-wrapper">
+                                <div class="seats-progress-bar">
+                                    <div class="seats-filled" style="width: 72%">
+                                        <span class="progress-label">18 chỗ đã giữ</span>
+                                    </div>
+                                    <div class="seats-remaining">
+                                        <span class="progress-label">7 chỗ còn lại</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="pricing-seats-urgency">Đăng ký sẽ đóng sớm khi đủ số lượng học viên giữ chỗ. Hạn chót: Thứ 4, 10/06.</div>
-                        <div class="pricing-amount">997.000đ</div>
+                        
+                        <!-- Price Comparison Context -->
+                        <div class="pricing-container">
+                            <div class="price-comparison">
+                                <span class="price-original">1.497.000đ</span>
+                                <span class="price-discount-badge">-33%</span>
+                            </div>
+                            <div class="price-current">997.000đ</div>
+                            <p class="price-note">Giá ưu đãi kết thúc Thứ 4, 10/06</p>
+                        </div>
 
                         <!-- Registration Trigger CTA -->
                         <button id="register-trigger-btn" class="btn btn-primary btn-block btn-lg">Giữ chỗ ngay</button>
                         
-                        <div class="pricing-risk-reduction">
-                            <span>✓ Đăng ký xong nhận ngay hướng dẫn chuẩn bị trước lớp.</span>
-                            <span>✓ Không cần biết kỹ thuật hay lập trình vẫn áp dụng dễ dàng.</span>
+                        <!-- Restructured CTA Benefits -->
+                        <div class="cta-benefits">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">⚡</span>
+                                <span class="benefit-text">Nhận checklist chuẩn bị ngay sau đăng ký</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🎯</span>
+                                <span class="benefit-text">Không cần kiến thức lập trình hay kỹ thuật vẫn áp dụng dễ dàng</span>
+                            </div>
                         </div>
                         
                         <p class="pricing-footer-copy">Bạn không trả tiền để nghe. <strong>Bạn trả tiền để đổi cách làm việc.</strong></p>
                     </div>
 
-                    <!-- ROI Calculator Box -->
-                    <div class="roi-calculator-box">
-                        <h5>📈 Tính toán hoàn vốn đầu tư (ROI)</h5>
-                        <div class="roi-breakdown">
-                            <p>Nếu workflow AI giúp bạn tiết kiệm <strong>3 giờ/tuần</strong>:</p>
-                            <ul class="roi-math-list">
-                                <li>Mức lương quản lý trung bình thực tế: <strong>40.000đ/giờ</strong></li>
-                                <li>Tiết kiệm mỗi tuần: 3h × 40K = <strong>120.000đ</strong></li>
-                                <li>Tiết kiệm mỗi tháng: 120K × 4 = <strong>480.000đ</strong></li>
-                            </ul>
-                            <p class="roi-conclusion">
-                                → Chỉ sau <strong>2 tháng</strong>, bạn đã thu hồi hoàn toàn chi phí 997K.<br>
-                                Từ tháng thứ 3 trở đi, mỗi tháng bạn "kiếm" thêm 480K chỉ nhờ workflow này chạy tự động.
+                    <!-- ROI Calculator Card -->
+                    <div class="card-base roi-calculator-card">
+                        <div class="card-header">
+                            <div class="icon-wrapper">
+                                <!-- Custom SVG ROI Graph Icon -->
+                                <svg class="section-icon" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="url(#gradient-roi)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="7" cy="17" r="1.5" fill="var(--purple-brand)"/>
+                                    <circle cx="12" cy="12" r="1.5" fill="var(--purple-brand)"/>
+                                    <circle cx="17" cy="7" r="1.5" fill="var(--orange-action)"/>
+                                    <defs>
+                                        <linearGradient id="gradient-roi" x1="7" y1="17" x2="17" y2="7">
+                                            <stop offset="0%" stop-color="var(--purple-brand)"/>
+                                            <stop offset="100%" stop-color="var(--orange-action)"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">Tính toán hoàn vốn đầu tư</h3>
+                        </div>
+                        
+                        <div class="card-body">
+                            <p class="body-base" style="margin-bottom: var(--space-lg);">
+                                Nếu workflow AI giúp bạn tiết kiệm <strong>3 giờ/tuần</strong>:
                             </p>
+                            
+                            <!-- Visual Equation -->
+                            <div class="roi-visual-equation">
+                                <div class="equation-term">
+                                    <span class="term-number">3</span>
+                                    <span class="term-label">giờ/tuần</span>
+                                </div>
+                                
+                                <span class="equation-operator">×</span>
+                                
+                                <div class="equation-term">
+                                    <span class="term-number">40K</span>
+                                    <span class="term-label">đ/giờ</span>
+                                </div>
+                                
+                                <span class="equation-operator">×</span>
+                                
+                                <div class="equation-term">
+                                    <span class="term-number">4</span>
+                                    <span class="term-label">tuần</span>
+                                </div>
+                                
+                                <span class="equation-equals">=</span>
+                                
+                                <div class="equation-result">
+                                    <span class="result-number">480K</span>
+                                    <span class="result-label">đ/tháng</span>
+                                </div>
+                            </div>
+                            
+                            <div class="roi-breakdown-list">
+                                <div class="breakdown-item">
+                                    <span class="item-label">Tiết kiệm mỗi tuần:</span>
+                                    <span class="item-value">120.000đ</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="item-label">Tiết kiệm mỗi tháng:</span>
+                                    <span class="item-value">480.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <div class="roi-conclusion-row">
+                                <div class="roi-conclusion-icon-container">
+                                    <!-- Custom SVG checkmark seal -->
+                                    <svg class="conclusion-icon" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="var(--success-green)" stroke-width="2" fill="var(--success-light)"/>
+                                        <path d="M9 12L11 14L15 10" stroke="var(--success-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="conclusion-text">
+                                    <strong>Hoàn vốn sau 2 tháng</strong>
+                                    <span class="body-sm">Từ tháng 3 trở đi: workflow tiếp tục mang lại 480.000đ giá trị thặng dư ròng mỗi tháng.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ROI Payback Timeline Visual -->
+                        <div class="roi-timeline">
+                            <div class="timeline-header">Lộ trình hoàn vốn thực tế</div>
+                            <div class="timeline-track">
+                                <div class="timeline-milestone month-1">
+                                    <div class="milestone-marker"></div>
+                                    <div class="milestone-content">
+                                        <strong>Tháng 1</strong>
+                                        <span>+480K</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-milestone month-2 highlight">
+                                    <div class="milestone-marker"></div>
+                                    <div class="milestone-content">
+                                        <strong>Tháng 2</strong>
+                                        <span>+480K</span>
+                                        <span class="payback-badge">✓ Hoàn vốn 997K</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-milestone month-3-plus">
+                                    <div class="milestone-marker"></div>
+                                    <div class="milestone-content">
+                                        <strong>Tháng 3+</strong>
+                                        <span>Lợi nhuận ròng</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Guarantee Box B2B -->
-                    <div class="guarantee-box">
-                        <div class="guarantee-icon">🛡️</div>
-                        <div class="guarantee-content">
-                            <h4>Cam kết chất lượng 100%</h4>
-                            <p>Nếu sau buổi học bạn không thiết lập được ít nhất <strong>1 workflow AI chạy thực tế</strong> cho công việc của mình, hãy gửi email cho chúng tôi trong vòng <strong>7 ngày</strong>.</p>
-                            <p>Chúng tôi sẽ <strong>hoàn lại 100% học phí</strong> lập tức hoặc **hỗ trợ tư vấn 1-on-1** cùng đội ngũ kỹ thuật của Sunext cho đến khi bạn vận hành thành công — bạn tự chọn phương án phù hợp nhất.</p>
+                    <!-- Restructured B2B Guarantee Card -->
+                    <div class="card-base guarantee-card">
+                        <!-- 100% No Risk SVG Stamp -->
+                        <div class="no-risk-stamp">
+                            <svg class="stamp-svg" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="var(--success-green)" stroke-width="3" stroke-dasharray="5,5"/>
+                                <text x="50" y="42" text-anchor="middle" font-size="11" font-weight="700" fill="var(--success-green)">100% KHÔNG</text>
+                                <text x="50" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="var(--success-green)">RỦI RO</text>
+                            </svg>
+                        </div>
+
+                        <div class="card-header">
+                            <div class="icon-wrapper animated">
+                                <!-- Custom SVG Shield Protection Icon -->
+                                <svg class="section-icon" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L4 6V12C4 16.5 7 20.5 12 22C17 20.5 20 16.5 20 12V6L12 2Z" stroke="var(--purple-brand)" stroke-width="2" stroke-linecap="round" fill="url(#gradient-shield)"/>
+                                    <path d="M9 12L11 14L15 10" stroke="var(--bg-white)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs>
+                                        <linearGradient id="gradient-shield" x1="12" y1="2" x2="12" y2="22">
+                                            <stop offset="0%" stop-color="var(--purple-brand)" stop-opacity="0.3"/>
+                                            <stop offset="100%" stop-color="var(--purple-brand)" stop-opacity="0.05"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">Cam kết chất lượng B2B 100%</h3>
+                        </div>
+                        
+                        <div class="card-body">
+                            <p class="guarantee-condition">
+                                Nếu sau buổi học bạn không thiết lập được 
+                                <strong>ít nhất 1 workflow AI chạy thực tế</strong> 
+                                cho công việc của mình, hãy liên hệ chúng tôi trong vòng 
+                                <strong class="highlight-text">7 ngày</strong>.
+                            </p>
+                            
+                            <div class="guarantee-options">
+                                <div class="option-card">
+                                    <div class="option-icon-wrapper">
+                                        <!-- Refund Coin SVG Icon -->
+                                        <svg class="option-icon" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="10" stroke="var(--success-green)" stroke-width="2" fill="var(--success-light)"/>
+                                            <path d="M8 12H16M12 8V16" stroke="var(--success-green)" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="option-content">
+                                        <strong>Hoàn tiền 100%</strong>
+                                        <span>Xử lý trong 24 giờ làm việc</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option-divider">
+                                    <span>HOẶC</span>
+                                </div>
+                                
+                                <div class="option-card">
+                                    <div class="option-icon-wrapper">
+                                        <!-- 1-on-1 Support User SVG Icon -->
+                                        <svg class="option-icon" viewBox="0 0 24 24" fill="none">
+                                            <path d="M16 21V19C16 17.9 15.1 17 14 17H10C8.9 17 8 17.9 8 19V21" stroke="var(--info-blue)" stroke-width="2"/>
+                                            <circle cx="12" cy="11" r="4" stroke="var(--info-blue)" stroke-width="2" fill="var(--info-light)"/>
+                                        </svg>
+                                    </div>
+                                    <div class="option-content">
+                                        <strong>Hỗ trợ 1-on-1</strong>
+                                        <span>Đồng hành đến khi thành công</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="guarantee-seal">
+                            <span>Cam kết bảo vệ quyền lợi học viên tuyệt đối bởi Sunext AI</span>
                         </div>
                     </div>
                 </div>
